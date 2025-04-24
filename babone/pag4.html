@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="file/bootstrap.min.css.map">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>نکات توسعه فردی</title>
+    <style>
+          body{
+        margin: 0px;
+      }
+      .home-btn {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #4b9cf9;
+        border: none;
+        text-align: center;
+        font-size: 15px;
+        padding: 10px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        position: relative;
+        bottom: 50px;
+        text-decoration: none;
+}
+    .home-btn a {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+      text-decoration: none;
+      color: white;
+    }
+
+    .home-btn a:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    .home-btn:hover a {
+      padding-right: 25px;
+      
+    }
+    .home-btn:hover a:after {
+      opacity: 1;
+      right: 0;
+    }
+    .home-btn:hover{
+      background-color: yellow;
+      color: black;
+    } 
+      .carousel-inner{
+        position: relative;
+        bottom: 70px;
+      }
+      .titr1{
+        text-align: center;
+      }
+      .offcanvas-body >a{
+        text-decoration: none;
+        color: black;
+      }
+      .offcanvas-body >a :hover{
+        color:  rgb(67, 185, 245);
+      }
+      .offcanvas-header{
+         background-color: rgb(255, 255, 3);
+      }
+      .logo{
+       direction: rtl;
+       position: relative;
+       bottom: 50px;
+       margin-right: 60px;
+      
+      }
+      .title-page4{
+        text-align: center;
+        position: relative;
+        bottom: 40px;
+      }
+      .text-mother{
+        display: flex;
+        direction: rtl;
+      }
+       .text-item{
+        display: flex;
+        direction: rtl;
+       }
+       .text-item{
+        display: flex;
+        direction: rtl;
+       }
+       .heart-btn {
+            cursor: pointer;
+            color: #ccc;
+            font-size: 20px;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        .heart-btn.favorited {
+            color: #ff4757;
+        }
+        .heart-btn:hover {
+            transform: scale(1.1);
+        }
+        .favorites-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .foot{
+          direction: rtl;
+          margin-top: 50px;
+          border: 1px solid rgb(253, 253, 78);
+          background-color: rgb(253, 253, 78);
+        }
+ 
+      @media screen and (max-width: 500px) {
+        .text-mother{
+          flex-wrap: wrap;
+       }
+        .imag-mother>img{
+          flex-wrap: wrap;
+          width: 300px;
+          margin: 10px;
+        }
+        .home-btn{
+        padding: 0px;
+        width: 150px;
+        position: relative;
+        bottom: 100px;
+       }
+       .foot{
+        flex-direction: column;
+       }
+  
+      }
+    
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm " style="background-color:  rgb(253, 253, 78); height: 50px;">
+        <div class="container-fluid" style="direction: rtl">
+                <h6>
+                  اینجا بابونه سرزمینی پر از جمله های دلنشین و خفن
+                </h6>
+        </div>
+  </nav>
+  <header>
+    <div class="offcanvas offcanvas-end" id="demo">
+            <div class="offcanvas-header">
+                <h4 class="offcanvas-title">فهرست</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+            <a href="pag1.html"><p>
+             جمله های انگیزشی 
+            </p></a>
+
+            <a href="pag2.html"><p>
+             جمله های عاشقانه
+            </p></a>
+
+            <a href="pag3.html"><p>
+            عکس نوشته
+            </p></a>
+
+            <a href="pag4.html"><p>
+              توسعه فردی
+            </p></a>
+
+            <a href="pag5.html"><p>
+               بیو فارسی و انگلیسی
+            </p></a>
+
+            <a href="pag6.html"><p>
+              شعر های ناب 
+             </p></a>
+
+             <a href="favorites.htm"><p>
+              مورد علاقه ها
+            </p></a>
+        </div>
+    </div>
+    
+    <div class="container-fluid mt-3" style="direction: rtl;">
+            <button   type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"  data-bs-toggle="tooltip" title="Hooray!">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30" >
+                    <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
+                    </svg>
+            </button>
+    </div>
+    <div class="logo" >
+        <img src="imags/logo.png" width="150px">
+      </div>
+      <button class="home-btn">
+        <a  href="index.html">بازگشت به صفحه اول</a>
+     </button>
+</header>
+<div class="title-page4">
+    <h3> ----توسعه فردی---- </h3>
+</div>
+<div class="text-mother d-flex justify-content-around">
+  <div class="text-item">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+        <span> 
+          ‌با انجام این ۹کار جایگاهتون رو بالاتر ببرید:<br>
+          ۱.از خودتون بودن خجالت نکشید
+          ۲.انتظاراتتون از خودتون بالا و از بقیه پایین بیارید<br>
+          ۳.هیچگاه طرز فکرتون رو به خاطر اینکه شبیه دیگران باشید عوض نکنید
+          ۴.به خودتان ایمان داشته باشید<br>
+          ۵.در لحظه زندگی کنید
+          ۶.نه گفتن رو یادبگیرید<br>
+          ۷.کاری رو انجام بدید که از ته قلب به درست بودنش ایمان دارید<br>
+          ۸.ازمتفاوت بودن نترسید
+          ۹.تو جامعه با افراد با احترام و محبت برخوردکنید.
+        </span>
+        <i class="fas fa-heart heart-btn" data-text="
+        ‌با انجام این ۹کار جایگاهتون رو بالاتر ببرید:
+              ۱.از خودتون بودن خجالت نکشید
+              ۲.انتظاراتتون از خودتون بالا و از بقیه پایین بیارید
+              ۳.هیچگاه طرز فکرتون رو به خاطر اینکه شبیه دیگران باشید عوض نکنید
+              ۴.به خودتان ایمان داشته باشید
+              ۵.در لحظه زندگی کنید
+              ۶.نه گفتن رو یادبگیرید
+              ۷.کاری رو انجام بدید که از ته قلب به درست بودنش ایمان دارید
+              ۸.ازمتفاوت بودن نترسید
+              ۹.تو جامعه با افراد با احترام و محبت برخوردکنید.
+      "></i>
+</div>
+     
+<div class="text-item  m-4">
+  <div>
+    <img src="imags/babon.jpg"  width="60px">
+  </div>
+          <span>  
+            چه کسانی رو باید از زندگیمون حذف کنیم:<br>
+            ①کسانی که باعث میشن حس بدی نسبت به خودمون داشته باشیم.<br>
+            ②کسانی که به خط قرمزاهامون احترام نمیذارن.!<br>
+            ③کسانی که دیگران تخریب میکنن تا خودشون خوب نشون بدن*<br>
+            ④کسانی که نمیتوانن موفقیت دیگران ببینند...
+          </span>
+        <i class="fas fa-heart heart-btn" data-text="
+        چه کسانی رو باید از زندگیمون حذف کنیم:
+        ①کسانی که باعث میشن حس بدی نسبت به خودمون داشته باشیم.
+        ②کسانی که به خط قرمزاهامون احترام نمیذارن.!
+        ③کسانی که دیگران تخریب میکنن تا خودشون خوب نشون بدن*
+        ④کسانی که نمیتوانن موفقیت دیگران ببینند...
+            "></i>
+</div>
+</div><hr>
+
+<div class="text-mother d-flex justify-content-around">
+  <div class="text-item">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+        <span> 
+          چطوری از ذهنمون مراقبت کنیم؟<br>
+          با غذای روح مناسب :<br>
+          • کتاب خوب
+          • موزیک الهام بخش
+          • پادکست مفید
+          با پاکسازی به موقع :<br>
+          • نوشتن افکار
+          • ورزش و فعالیت بدنی
+          • صحبت با دوست خوب
+          • تنفس عمیق
+          با تعلیم و تمرین درست :<br>
+          • مدیتیشن
+          • ساخت عادات جدید
+          • تمرین نه گفتن
+          • ترک عادات بد
+          • کارهای خلاقانه
+
+        </span>
+        <i class="fas fa-heart heart-btn" data-text="
+        چطوری از ذهنمون مراقبت کنیم؟
+        با غذای روح مناسب :
+        • کتاب خوب
+        • موزیک الهام بخش
+        • پادکست مفید
+        با پاکسازی به موقع :
+        • نوشتن افکار
+        • ورزش و فعالیت بدنی
+        • صحبت با دوست خوب
+        • تنفس عمیق
+        با تعلیم و تمرین درست :
+        • مدیتیشن
+        • ساخت عادات جدید
+        • تمرین نه گفتن
+        • ترک عادات بد
+        • کارهای خلاقانه
+
+      "></i>
+</div>
+     
+<div class="text-item  m-4">
+  <div>
+    <img src="imags/babon.jpg"  width="60px">
+  </div>
+          <span>  
+            تکنیک های آرام سازی سریع:<br>
+            نوشتن احساسات<br>
+            گوش دادن به آهنگ ملایم<br>           
+            تمرین تنفس عمیق<br>           
+            قدم زدن و پیاده روی  .
+          </span>
+        <i class="fas fa-heart heart-btn" data-text="
+        تکنیک های آرام سازی سریع:
+        نوشتن احساسات
+        گوش دادن به آهنگ ملایم       
+        تمرین تنفس عمیق           
+        قدم زدن و پیاده روی  
+            "></i>
+</div>
+</div><hr>
+
+<div class="imag-mother  m-2">
+  <img  class="m-2" src="imags/img-page4.1.jpg" alt="نکات توسعه فردی" width="30%"  >
+  <img  class="m-2" src="imags/img-page4.2.jpg" alt="نکات توسعه فردی" width="30%">
+  <img  class="m-2"  src="imags/img-page4.3.jpg" alt="نکات توسعه فردی" width="30%">
+</div><hr>
+
+
+<div class="text-mother d-flex justify-content-around">
+  <div class="text-item">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+        <span> 
+          چرا بعضیا با کوچکترین مسائل ناراحت میشن؟<br>
+
+          شاید مسائلی که به نظر شما کوچیک هستن واسه اونا بزرگ و با ارزش باشند.<br>
+
+          ممکنه مدت زیادی تحت آزار روانی قرار گرفته باشند و در موقعیت های اجتماعی بسیار حساس تر از دیگران باشند.<br>
+
+          مدت بسیار زیادی احساساتشون رو سرکوب کردن و دیگه ظرفیتی برای نگه داشتنشون ندارند به همین خاطر سریع واکنش نشون میدن.<br>
+
+          مدت زیادی همه چیز در زندگیشون درست پیش نرفته و امید زیادی دارن که دیگه همه چیز خوب پیش بره ، <br>
+          به همین خاطر با کوچکترین مشکلی به هم میریزن و گذشته براشون یادآوری میشه…<br>
+
+          به سادگی آدما رو قضاوت نکنیم. 
+
+        </span>
+        <i class="fas fa-heart heart-btn" data-text="
+        چرا بعضیا با کوچکترین مسائل ناراحت میشن؟
+        شاید مسائلی که به نظر شما کوچیک هستن واسه اونا بزرگ و با ارزش باشند.
+        ممکنه مدت زیادی تحت آزار روانی قرار گرفته باشند و در موقعیت های اجتماعی بسیار حساس تر از دیگران باشند.
+        مدت بسیار زیادی احساساتشون رو سرکوب کردن و دیگه ظرفیتی برای نگه داشتنشون ندارند به همین خاطر سریع واکنش نشون میدن.
+        مدت زیادی همه چیز در زندگیشون درست پیش نرفته و امید زیادی دارن که دیگه همه چیز خوب پیش بره ، 
+        به همین خاطر با کوچکترین مشکلی به هم میریزن و گذشته براشون یادآوری میشه…
+        به سادگی آدما رو قضاوت نکنیم. 
+
+      "></i>
+</div>
+     
+<div class="text-item  m-4">
+  <div>
+    <img src="imags/babon.jpg"  width="60px">
+  </div>
+          <span>  
+            ۶عادتی که زندگیت میسازه: <br>
+            سحرخیزی<br>
+            مدیتیشن<br>
+            هدفمندی<br>
+            خواب کافی<br>
+            خودباوری
+            قدردانی 
+          </span>
+        <i class="fas fa-heart heart-btn" data-text="
+        ۶عادتی که زندگیت میسازه: 
+        سحرخیزی
+        مدیتیشن
+        هدفمندی
+        خواب کافی
+        خودباوری
+        قدردانی  
+            "></i>
+</div>
+</div><hr>
+
+<div class="text-mother d-flex justify-content-around">
+  <div class="text-item">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+        <span> 
+          علائم وابستگی ناسالم :<br>
+          ● مداوم نگران این هستید
+          که بقیه شما رو ترک کنند تنها بمونید<br>
+          ● تو رابطه ای که تموم شده باقی مانده اید
+          برای اطرافیانتون بیش از اندازه احساس مسئولیت می کنید<br>
+          ● برای اینکه ازخودتون رضایت داشته باشید همش مشغول راضی کردن دیگران هستید<br>
+          احساس خود کم بینی و قربانی بودن دارید<br>
+        </span>
+        <i class="fas fa-heart heart-btn" data-text="
+        علائم وابستگی ناسالم :
+        ● مداوم نگران این هستید
+        که بقیه شما رو ترک کنند تنها بمونید
+        ● تو رابطه ای که تموم شده باقی مانده اید
+        برای اطرافیانتون بیش از اندازه احساس مسئولیت می کنید
+        ● برای اینکه ازخودتون رضایت داشته باشید همش مشغول راضی کردن دیگران هستید
+        احساس خود کم بینی و قربانی بودن دارید
+      "></i>
+</div>
+     
+<div class="text-item  m-4">
+  <div>
+    <img src="imags/babon.jpg"  width="60px">
+  </div>
+          <span>  
+            استرس داری انجامش بده:<br>
+            پیاده روی هرروز یا ورزش هر روز <br>
+            نوشتن روزانه 
+            انجام کار های هنری <br>
+            صحبت کردن با دوستانتان
+            تنفس هر روزه
+          </span>
+        <i class="fas fa-heart heart-btn" data-text="
+        استرس داری انجامش بده:
+        پیاده روی هرروز یا ورزش هر روز 
+        نوشتن روزانه 
+        انجام کار های هنری 
+        صحبت کردن با دوستانتان
+        تنفس هر روزه 
+            "></i>
+</div>
+</div><hr>
+
+<div class="imag-mother m-3 ">
+  <img  class="m-2" src="imags/img-page4.4.jpg" alt="خودمراقبتی" width="30%"  >
+  <img  class="m-2"  src="imags/img-page4.5.jpg" alt="خودمراقبتی" width="30%">
+  <img   class="m-2" src="imags/img-page4.6.jpg" alt="خودمراقبتی" width="30%">
+</div><hr>
+
+<div class="text-mother d-flex justify-content-around">
+  <div class="text-item">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+        <span> 
+          شجاعت میتونه این موارد باشه:<br>
+          _پایان دادن به یه رابطه سمی<br>
+          _نه گفتن به چیزی که دوست نداریم<br>
+          _بلند شدن از تخت خواب بعد از جنگ با افسردگی<br>
+          _عذرخواهی کردن بعد از یه اشتباه<br>
+          _بخشیدن خودمون
+          _شروع دوباره بعد از یه شکست و ضربه سنگین
+          _شروع کردن راه های جدید
+        </span>
+        <i class="fas fa-heart heart-btn" data-text="
+        شجاعت میتونه این موارد باشه:
+        _پایان دادن به یه رابطه سمی
+        _نه گفتن به چیزی که دوست نداریم
+        _بلند شدن از تخت خواب بعد از جنگ با افسردگی
+        _عذرخواهی کردن بعد از یه اشتباه
+        _بخشیدن خودمون
+        _شروع دوباره بعد از یه شکست و ضربه سنگین
+        _شروع کردن راه های جدید
+      "></i>
+</div>
+     
+<div class="text-item  m-4">
+  <div>
+    <img src="imags/babon.jpg"  width="60px">
+  </div>
+          <span>  
+            چرا احساس خوشبختی نمیکنیم؟<br>
+            -انتظارات غیرواقعی برای خود انتخاب می کنیم<br>
+            -فکر می کنیم دیگران خاص هستند اما دلیل آن را نمیدانیم<br>
+            -خوشبختی را با واحدهای اشتباه میسنجیم<br>
+            -عادت کرده ایم فقط داشته هایی که دیگران بیشتر دارند را ببینیم<br>
+            -بدنبودن را با خوب بودن اشتباه گرفته ایم<br>
+            -امیدواریم دیگران ما را خوشبخت کنند
+            -به دنبال ترحم هستیم<br>
+            -فکر میکنیم پس از خوشبختی بدبختی می آید<br>
+            -تاثیر تلاش دیگران درخوشبختیشان رو نمیبینیم
+          </span>
+        <i class="fas fa-heart heart-btn" data-text="
+        چرا احساس خوشبختی نمیکنیم؟
+        -انتظارات غیرواقعی برای خود انتخاب می کنیم
+        -فکر می کنیم دیگران خاص هستند اما دلیل آن را نمیدانیم
+        -خوشبختی را با واحدهای اشتباه میسنجیم
+        -عادت کرده ایم فقط داشته هایی که دیگران بیشتر دارند را ببینیم
+        -بدنبودن را با خوب بودن اشتباه گرفته ایم
+        -امیدواریم دیگران ما را خوشبخت کنند
+        -به دنبال ترحم هستیم
+        -فکر میکنیم پس از خوشبختی بدبختی می آید
+        -تاثیر تلاش دیگران درخوشبختیشان رو نمیبینیم
+            "></i>
+</div>
+</div><hr>
+
+<div class="imag-mother m-3">
+  <img  class="m-2" src="imags/img-page4.8.jpg" alt="توسعه فردی" width="30%"  >
+  <img  class="m-2"  src="imags/img-page4.9.jpg" alt="توسعه فردی" width="30%">
+  <img  class="m-2"  src="imags/imge-page4.11.jpeg" alt="توسعه فردی" width="30%">
+</div><hr>
+<div class="text-mother d-flex justify-content-around">
+  <div class="text-item">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+        <span> 
+          مسیر واقعی موفقیت :<br>
+          -ایده
+          -برنامه ریزی
+          -اجرا
+          -شک به خود <br>
+          -شک به شکست
+          -برخورد به مانع
+          -افسرده شدن<br>
+          -مثبت موندن
+          -موفقیت کوچیک و بزرگ 
+          -استمرار 
+        </span>
+        <i class="fas fa-heart heart-btn" data-text="
+        مسیر واقعی موفقیت :
+        -ایده
+        -برنامه ریزی
+        -اجرا
+        -شک به خود 
+        -شک به شکست
+        -برخورد به مانع
+        -افسرده شدن
+        -مثبت موندن
+        -موفقیت کوچیک و بزرگ 
+        -استمرار 
+      "></i>
+</div>
+     
+<div class="text-item  m-4">
+  <div>
+    <img src="imags/babon.jpg"  width="60px">
+  </div>
+          <span>  
+            شیش کاری که بهتر کارتو انجام بدی:<br>
+            ۱ اینترنت تا پایان کار قطع کن<br>
+            ۲ هر۴۵ دقیقه یک ربع استراحت کن <br>
+            ۳ کارهای فردا رو حتما لیست کن<br>
+            ۴ کارهای بزرگ تر به مرحله کوچیک تقسیم کن<br>
+            ۵ از کارهای سخت تر شروع کن<br>
+            ۶ صبح زود پاشو
+          </span>
+        <i class="fas fa-heart heart-btn" data-text="
+          شیش کاری که بهتر کارتو انجام بدی:
+          ۱ اینترنت تا پایان کار قطع کن
+          ۲ هر۴۵ دقیقه یک ربع استراحت کن 
+          ۳ کارهای فردا رو حتما لیست کن
+          ۴ کارهای بزرگ تر به مرحله کوچیک تقسیم کن
+          ۵ از کارهای سخت تر شروع کن
+          ۶ صبح زود پاشو
+            "></i>
+</div>
+</div><hr>
+<div class="text-mother d-flex justify-content-around">
+  <div class="text-item">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+        <span> 
+          چرا تو رابطه هات صدمه میبینی؟<br>
+          * چون به افرادی دل میبندی که از تو گریزونن<br>
+          * چون به افرادی توجه میکنی که هیچ توجهی بهت ندارن<br>
+          * چون برای کسایی وقت داری که اصلا در دسترس نیستن<br>
+          * چون باج میدی که به هر قیمتی دوستت داشته باشن<br>
+          * چون احساس بی ارزشی می کنی و بودن در رابطه اشتباه رو به تنهایی ترجیح میدی<br>
+          * چون میترسی، ترس از دست دادن داری و با کارهات درفت رو فراری میدی<br>
+          * چون یادت میره دوست داشتنی هستی و هیچ رابطه ای از خودت مهمتر نیست<br>
+        </span>
+        <i class="fas fa-heart heart-btn" data-text="
+        چرا تو رابطه هات صدمه میبینی؟
+        * چون به افرادی دل میبندی که از تو گریزونن
+        * چون به افرادی توجه میکنی که هیچ توجهی بهت ندارن
+        * چون برای کسایی وقت داری که اصلا در دسترس نیستن
+        * چون باج میدی که به هر قیمتی دوستت داشته باشن
+        * چون احساس بی ارزشی می کنی و بودن در رابطه اشتباه رو به تنهایی ترجیح میدی
+        * چون میترسی، ترس از دست دادن داری و با کارهات درفت رو فراری میدی
+        * چون یادت میره دوست داشتنی هستی و هیچ رابطه ای از خودت مهمتر نیست
+      "></i>
+</div>
+     
+<div class="text-item  m-4">
+  <div>
+    <img src="imags/babon.jpg"  width="60px">
+  </div>
+          <span>  
+            صبر تنها عصبانی نشدن نیست!<br>
+            صبر یعنی اینکه قادر باشید ۷ احساس <br>
+            زیر را در خود کنترل ، مدیریت و مهار کنید.<br>
+            تنفر
+            علاقه
+            لذت 
+            اضطراب
+            خشم
+            غم
+            ترس<br>
+            اگر بتوانید بروز عکس العمل ناخوشایند در مقابل این هفت احساس را از روان خود بگیرید <br>
+            و به اندیشه تان مجال تامل بیشتر جهت ابراز عکس العمل خوشایند<br>
+            در برخورد با آنها بدهید شما آدم صبوری هستید...
+          </span>
+        <i class="fas fa-heart heart-btn" data-text="
+        صبر تنها عصبانی نشدن نیست!
+        صبر یعنی اینکه قادر باشید ۷ احساس 
+        زیر را در خود کنترل ، مدیریت و مهار کنید.
+        تنفر
+        علاقه
+        لذت 
+        اضطراب
+        خشم
+        غم
+        ترس
+        اگر بتوانید بروز عکس العمل ناخوشایند در مقابل این هفت احساس را از روان خود بگیرید
+         و به اندیشه تان مجال تامل بیشتر جهت ابراز عکس العمل خوشایند در برخورد
+          با آنها بدهید شما آدم صبوری هستید...
+            "></i>
+</div>
+</div><hr>
+<div class="imag-mother m-3">
+  <img  class="m-2" src="imags/img-page4.12.jpg" alt="خود مراقبتی" width="30%"  >
+  <img  class="m-2"  src="imags/imge-page4.15.jpg" alt="خود مراقبتی" width="30%">
+  <img  class="m-2"  src="imags/imge-page4.16.jpg" alt="خود مراقبتی" width="30%">
+</div>
+
+<footer class="foot  d-flex justify-content-around">
+      <h6 class="m-2">متن و جمله مورد علاقتان را برای ما بفرستید تا در سایت گذاشته شود♥️</h6>
+      <p> ایمیل: za.negahdari.96@gmail.com </p>
+      <p> ایدی تلگرام : zizi_24x</p>
+</footer>
+
+<script src="file/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // مقداردهی اولیه اگر وجود نداشت
+        if(localStorage.getItem('textFavorites') === null) {
+            localStorage.setItem('textFavorites', JSON.stringify([]));
+        }
+        
+        // بارگذاری لیست مورد علاقه‌ها
+        let favorites = JSON.parse(localStorage.getItem('textFavorites'));
+        
+        // تنظیم وضعیت اولیه قلب‌ها
+        $('.heart-btn').each(function() {
+            const text = $(this).data('text');
+            if(favorites.includes(text)) {
+                $(this).addClass('favorited');
+            }
+        });
+        
+        // کلیک روی قلب
+        $('.heart-btn').click(function() {
+            const text = $(this).data('text');
+            let favorites = JSON.parse(localStorage.getItem('textFavorites'));
+            
+            if($(this).hasClass('favorited')) {
+                // حذف از لیست
+                favorites = favorites.filter(item => item !== text);
+            } else {
+                // اضافه به لیست
+                if(!favorites.includes(text)) {
+                    favorites.push(text);
+                }
+            }
+            
+            // ذخیره در localStorage
+            localStorage.setItem('textFavorites', JSON.stringify(favorites));
+            
+            // تغییر وضعیت قلب
+            $(this).toggleClass('favorited');
+            
+            console.log('متن‌های ذخیره شده:', favorites);
+        });
+    });
+</script>
+</body>
+</html>

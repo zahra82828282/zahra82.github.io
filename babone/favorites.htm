@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مورد علاقه‌های من</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #ff4757;
+            --secondary-color: #2f3542;
+            --text-color: #333;
+            --light-gray: #f1f2f6;
+            --white: #ffffff;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-gray);
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: rgb(59, 129, 235);
+            color: var(--white);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .favorites-container {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        .favorite-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+        
+        .favorite-item:last-child {
+            border-bottom: none;
+        }
+        
+        .favorite-item:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .favorite-text {
+            flex: 1;
+            padding: 0 15px;
+            word-break: break-word;
+        }
+        
+        .remove-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .remove-btn:hover {
+            background-color: #ff6b81;
+            transform: translateY(-2px);
+        }
+        
+        .empty-message {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: rgb(59, 129, 235);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .back-link:hover {
+            background-color: #57606f;
+            transform: translateY(-2px);
+        } 
+        /* رسپانسیو برای موبایل */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .favorite-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px 10px;
+            }
+            
+            .favorite-text {
+                padding: 10px 0;
+                width: 100%;
+            }
+            
+            .remove-btn {
+                width: 100%;
+                margin-top: 10px;
+            }
+            
+            .back-link {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+        
+        /* انیمیشن برای آیتم‌ها */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .favorite-item {
+            animation: fadeIn 0.3s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-heart" style="margin-left: 10px;"></i>مورد علاقه‌های من</h1>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="favorites-container" id="favorites-container">
+            <!-- محتوای مورد علاقه‌ها اینجا نمایش داده می‌شود -->
+        </div>
+        
+   
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('favorites-container');
+            
+            // بارگذاری مورد علاقه‌ها از localStorage
+            let favorites = JSON.parse(localStorage.getItem('textFavorites')) || [];
+            
+            // نمایش مورد علاقه‌ها
+            function displayFavorites() {
+                container.innerHTML = '';
+                
+                if(favorites.length === 0) {
+                    container.innerHTML = `
+                        <div class="empty-message">
+                            <i class="far fa-heart" style="font-size: 2rem; margin-bottom: 15px;"></i>
+                            <p>هنوز هیچ متنی را ذخیره نکرده‌اید.</p>
+                        </div>
+                    `;
+                } else {
+                    favorites.forEach((text, index) => {
+                        const item = document.createElement('div');
+                        item.className = 'favorite-item';
+                        item.innerHTML = `
+                            <div class="favorite-text">${text}</div>
+                            <button class="remove-btn" data-index="${index}">
+                                <i class="fas fa-trash-alt" style="margin-left: 5px;"></i>
+                                حذف
+                            </button>
+                        `;
+                        container.appendChild(item);
+                    });
+                }
+            }
+            
+            // حذف مورد علاقه
+            document.addEventListener('click', function(e) {
+                if(e.target.classList.contains('remove-btn') || 
+                   e.target.parentElement.classList.contains('remove-btn')) {
+                    const btn = e.target.classList.contains('remove-btn') ? 
+                                e.target : e.target.parentElement;
+                    const index = btn.getAttribute('data-index');
+                    
+                    // نمایش دیالوگ تأیید
+                    if(confirm('آیا مطمئن هستید می‌خواهید این مورد را حذف کنید؟')) {
+                        favorites.splice(index, 1);
+                        localStorage.setItem('textFavorites', JSON.stringify(favorites));
+                        displayFavorites();
+                    }
+                }
+            });
+            
+            // نمایش اولیه
+            displayFavorites();
+        });
+    </script>
+</body>
+</html>

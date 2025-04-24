@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="file/bootstrap.min.css.map">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>بیو فارسی و انگلیسی</title>
+     <style>
+        body{
+        margin: 0px;
+      }
+      .logo{
+       direction: rtl;
+       position: relative;
+       bottom: 50px;
+       margin-right: 60px;
+      
+      }
+      .home-btn {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #4b9cf9;
+        border: none;
+        text-align: center;
+        font-size: 15px;
+        padding: 10px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        position: relative;
+        bottom: 50px;
+        text-decoration: none;
+}
+    .home-btn a {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+      text-decoration: none;
+      color: white;
+    }
+
+    .home-btn a:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    .home-btn:hover a {
+      padding-right: 25px;
+      
+    }
+    .home-btn:hover a:after {
+      opacity: 1;
+      right: 0;
+    }
+    .home-btn:hover{
+      background-color: yellow;
+      color: black;
+    } 
+      .carousel-inner{
+         position: relative;
+         bottom: 70px;
+      }
+      .titr1{
+        text-align: center;
+      }
+      .offcanvas-body >a{
+        text-decoration: none;
+        color: black;
+      }
+      .offcanvas-body >a :hover{
+        color:  rgb(67, 185, 245);
+      }
+      .offcanvas-header{
+         background-color: rgb(255, 255, 3);
+      }
+      .titlee{
+        text-align: center;
+        position: relative;
+        bottom: 60px;
+      }
+      .text-mother{
+        display: flex;
+      }
+       .text-item{
+        display: flex;
+       }
+       .heart-btn {
+            cursor: pointer;
+            color: #ccc;
+            font-size: 20px;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        .heart-btn.favorited {
+            color: #ff4757;
+        }
+        .heart-btn:hover {
+            transform: scale(1.1);
+        }
+        .favorites-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .foot{
+          direction: rtl;
+          margin-top: 50px;
+          border: 1px solid rgb(253, 253, 78);
+          background-color: rgb(253, 253, 78);
+        }
+       @media screen and (max-width: 500px) {
+        .text-mother{
+        flex-wrap: wrap;
+        width: 300px;
+        margin: 10px;
+       }
+       .home-btn{
+        padding: 0px;
+        width: 150px;
+        position: relative;
+        bottom: 100px;
+       }
+       .cart-mother{
+          flex-wrap: wrap;
+       }
+       .foot{
+        flex-direction: column;
+       }
+      }
+    
+     </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm " style="background-color:  rgb(253, 253, 78); height: 50px;">
+        <div class="container-fluid" style="direction: rtl;">
+                <h6>
+                  اینجا بابونه سرزمینی پر از جمله های دلنشین و خفن
+                </h6>
+        </div>
+  </nav>
+<header>
+    <div class="offcanvas offcanvas-end" id="demo">
+            <div class="offcanvas-header">
+                <h4 class="offcanvas-title">فهرست</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+            <a href="pag1.html"><p>
+             جمله های انگیزشی 
+            </p></a>
+
+            <a href="pag2.html"><p>
+             جمله های عاشقانه
+            </p></a>
+
+            <a href="pag3.html"><p>
+              عکس نوشته
+            </p></a>
+
+            <a href="pag4.html"><p>
+            توسعه فردی 
+            </p></a>
+
+            <a href="pag5.html"><p>
+               بیو فارسی و انگلیسی
+            </p></a>
+
+            <a href="pag6.html"><p>
+              شعر های ناب 
+             </p></a>
+
+             <a href="favorites.htm"><p>
+              مورد علاقه ها
+            </p></a>
+        </div>
+    </div>
+    <div class="container-fluid mt-3" style="direction: rtl;">
+        <button   type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"  data-bs-toggle="tooltip" title="Hooray!">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30" >
+                <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
+                </svg>
+        </button>
+</div>
+    <div class="logo" >
+        <img src="imags/logo.png" width="150px">
+      </div>
+      <button class="home-btn">
+        <a  href="index.html">بازگشت به صفحه اول</a>
+     </button>
+  </header>
+        <div class="titlee">
+            <h3>
+           ----بیو فارسی و انگلیسی----
+            </h3>
+        </div>
+        <div class="text-mother d-flex justify-content-around">
+          <div class="text-item">
+                <div>
+                  <img src="imags/babon.jpg"  width="60px">
+                </div>
+                <span> 
+                  𝙔𝙤𝙪 𝙘𝙖𝙣𝙩 𝙨𝙚𝙚 𝙢𝙮 𝙡𝙤𝙨𝙨<br>
+                  نمیتونی باختِ منو ببینی‌‌
+                </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                𝙔𝙤𝙪 𝙘𝙖𝙣𝙩 𝙨𝙚𝙚 𝙢𝙮 𝙡𝙤𝙨𝙨
+                نمیتونی باختِ منو ببینی‌‌
+              "></i>
+        </div>
+             
+        <div class="text-item  m-4">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+                  <span>  
+                    𝐼 𝑐𝑎𝑛𝑡 𝑚𝑎𝑘𝑒 𝑦𝑜𝑢 𝑖𝑛𝑡𝑜 𝑠𝑜𝑚𝑒𝑡ℎ𝑖𝑛𝑔 𝑡ℎ𝑎𝑡 𝑦𝑜𝑢𝑟𝑒 𝑛𝑜𝑡<br>
+                    من نمیتونم ازت چیزی بسازم که نیستی‌‌
+                  </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                𝐼 𝑐𝑎𝑛𝑡 𝑚𝑎𝑘𝑒 𝑦𝑜𝑢 𝑖𝑛𝑡𝑜 𝑠𝑜𝑚𝑒𝑡ℎ𝑖𝑛𝑔 𝑡ℎ𝑎𝑡 𝑦𝑜𝑢𝑟𝑒 𝑛𝑜𝑡
+                من نمیتونم ازت چیزی بسازم که نیستی‌‌
+                    "></i>
+        </div>
+        </div><hr>
+
+        <div class="text-mother d-flex justify-content-around">
+          <div class="text-item">
+                <div>
+                  <img src="imags/babon.jpg"  width="60px">
+                </div>
+                <span> 
+                  𝗗𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲𝘀 𝗺𝗮𝗸𝗲 𝗹𝗶𝗳𝗲 𝗯𝗲𝗮𝘂𝘁𝗶𝗳𝘂𝗹<br>
+                  تفاوت هاست که زندگی رو‌ زیبا میکنه‌‌
+                </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                𝗗𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲𝘀 𝗺𝗮𝗸𝗲 𝗹𝗶𝗳𝗲 𝗯𝗲𝗮𝘂𝘁𝗶𝗳𝘂𝗹
+                تفاوت هاست که زندگی رو‌ زیبا میکنه‌‌
+              "></i>
+        </div>
+             
+        <div class="text-item  m-4">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+                  <span>  
+                    𝐸𝑣𝑒𝑟𝑦𝑜𝑛𝑒 𝑤𝑖𝑙𝑙 𝑠ℎ𝑜𝑤 𝑡ℎ𝑒𝑖𝑟 𝑡𝑟𝑢𝑒 𝑐𝑜𝑙𝑜𝑟𝑠, 𝑗𝑢𝑠𝑡 𝑏𝑒 𝑝𝑎𝑡𝑖𝑒𝑛𝑡<br>
+                    همه بالاخره هويت واقعی خودشونو نشون میدن، صبر داشته باش‌
+                  </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                𝐸𝑣𝑒𝑟𝑦𝑜𝑛𝑒 𝑤𝑖𝑙𝑙 𝑠ℎ𝑜𝑤 𝑡ℎ𝑒𝑖𝑟 𝑡𝑟𝑢𝑒 𝑐𝑜𝑙𝑜𝑟𝑠, 𝑗𝑢𝑠𝑡 𝑏𝑒 𝑝𝑎𝑡𝑖𝑒𝑛𝑡
+                همه بالاخره هويت واقعی خودشونو نشون میدن، صبر داشته باش
+                    "></i>
+        </div>
+        </div><hr>
+
+        
+        <div class="text-mother d-flex justify-content-around">
+          <div class="text-item">
+                <div>
+                  <img src="imags/babon.jpg"  width="60px">
+                </div>
+                <span>
+                  𝑰 𝒔𝒂𝒘 𝒂 𝒔𝒊𝒅𝒆 𝒐𝒇 𝒎𝒆 𝒕𝒉𝒂𝒕 𝒊 𝒔𝒄𝒂𝒓𝒆𝒅 𝒐𝒇<br>
+                  یه گوشه از خودمو دیدم که می‌ترسیدم ببینم
+                </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                𝑰 𝒔𝒂𝒘 𝒂 𝒔𝒊𝒅𝒆 𝒐𝒇 𝒎𝒆 𝒕𝒉𝒂𝒕 𝒊 𝒔𝒄𝒂𝒓𝒆𝒅 𝒐𝒇
+                یه گوشه از خودمو دیدم که می‌ترسیدم ببینم
+              "></i>
+        </div>
+             
+        <div class="text-item  m-4">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+                  <span>  
+                    The greatest tragedy of life is not death, its living without a purpose‌‌<br>
+                    بزرگترین تراژدی زندگی مرگ نیس، بی هدف زندگی کردنه‌‌
+                  </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                The greatest tragedy of life is not death, its living without a purpose‌‌
+                بزرگترین تراژدی زندگی مرگ نیس، بی هدف زندگی کردنه‌‌
+                    "></i>
+        </div>
+        </div><hr>
+
+        <div class="text-mother d-flex justify-content-around">
+          <div class="text-item">
+                <div>
+                  <img src="imags/babon.jpg"  width="60px">
+                </div>
+                <span>
+                  𝑭𝒍𝒚 𝒘𝒊𝒕𝒉 𝒎𝒆 𝒐𝒓 𝒈𝒆𝒕 𝒕𝒉𝒆 𝒉𝒆𝒍𝒍 𝒐𝒖𝒕 𝒐𝒇 𝒎𝒚 𝒘𝒂𝒚<br>
+                  يا با من پرواز كن ، یا از سر راهم برو كنار
+                </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                𝑭𝒍𝒚 𝒘𝒊𝒕𝒉 𝒎𝒆 𝒐𝒓 𝒈𝒆𝒕 𝒕𝒉𝒆 𝒉𝒆𝒍𝒍 𝒐𝒖𝒕 𝒐𝒇 𝒎𝒚 𝒘𝒂𝒚
+                يا با من پرواز كن ، یا از سر راهم برو كنار
+              "></i>
+        </div>
+             
+        <div class="text-item  m-4">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+                  <span>  
+                    هیچ چیزی توی این دنیا بی‌جواب نمیمونه‌‌<br>
+                    𝑻𝒉𝒆 𝒔𝒐𝒍𝒖𝒕𝒊𝒐𝒏 𝒕𝒐 𝒅𝒊𝒇𝒇𝒊𝒄𝒖𝒍𝒕 𝒅𝒂𝒚𝒔 𝒊𝒔 𝒉𝒐𝒑𝒆
+                  </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                هیچ چیزی توی این دنیا بی‌جواب نمیمونه‌‌
+                𝑻𝒉𝒆 𝒔𝒐𝒍𝒖𝒕𝒊𝒐𝒏 𝒕𝒐 𝒅𝒊𝒇𝒇𝒊𝒄𝒖𝒍𝒕 𝒅𝒂𝒚𝒔 𝒊𝒔 𝒉𝒐𝒑𝒆
+                    "></i>
+        </div>
+        </div><hr>
+
+        <div class="text-mother d-flex justify-content-around">
+          <div class="text-item">
+                <div>
+                  <img src="imags/babon.jpg"  width="60px">
+                </div>
+                <span>
+                  Thinking about the end of everything makes the sweetness of its presence bitter‌‌<br>
+                  اندیشیدن به پایانِ هر چیز، شیرینی حضورش را تلخ می‌کند‌‌
+                </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                Thinking about the end of everything makes the sweetness of its presence bitter‌‌
+                اندیشیدن به پایانِ هر چیز، شیرینی حضورش را تلخ می‌کند‌‌
+              "></i>
+        </div>
+             
+        <div class="text-item  m-4">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+                  <span>  
+                    Make yourself a person who can be taken care of on hard days‌‌<br>
+                        از خودت آدمی بساز که روزای سخت مراقبت باشه‌‌
+                  </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                Make yourself a person who can be taken care of on hard days‌‌
+                از خودت آدمی بساز که روزای سخت مراقبت باشه‌‌
+                    "></i>
+        </div>
+        </div><hr>
+  
+  
+        <div class="text-mother d-flex justify-content-around">
+          <div class="text-item">
+                <div>
+                  <img src="imags/babon.jpg"  width="60px">
+                </div>
+                <span>
+                  When you know your limits you're always respected<br>
+                  وقتی حد خودتو بدونی همیشه محترمی‌
+                </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                When you know your limits you're always respected
+                وقتی حد خودتو بدونی همیشه محترمی
+              "></i>
+        </div>
+             
+        <div class="text-item  m-4">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+                  <span>  
+                    𝑪𝒉𝒊𝒍𝒍 𝒃𝒂𝒃𝒆, 𝒘𝒆'𝒓𝒆 𝒂𝒍𝒍 𝒃𝒂𝒅 𝒊𝒏 𝒔𝒐𝒎𝒆𝒐𝒏𝒆'𝒔 𝒔𝒕𝒐𝒓𝒚<br>
+                    بیخیال عزیزم، هممون توو داستان یه نفر آدم بده‌ایم
+                  </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                𝑪𝒉𝒊𝒍𝒍 𝒃𝒂𝒃𝒆, 𝒘𝒆'𝒓𝒆 𝒂𝒍𝒍 𝒃𝒂𝒅 𝒊𝒏 𝒔𝒐𝒎𝒆𝒐𝒏𝒆'𝒔 𝒔𝒕𝒐𝒓𝒚
+                بیخیال عزیزم، هممون توو داستان یه نفر آدم بده‌ایم
+                    "></i>
+        </div>
+        </div><hr>
+
+        <div class="text-mother d-flex justify-content-around">
+          <div class="text-item">
+                <div>
+                  <img src="imags/babon.jpg"  width="60px">
+                </div>
+                <span>
+                  나의 침묵은 약함이 아니라 복수의 시작이다<br>
+                   سکوت من ضعف نیست، آغاز انتقام است
+                </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                나의 침묵은 약함이 아니라 복수의 시작이다
+                سکوت من ضعف نیست، آغاز انتقام است
+              "></i>
+        </div>
+             
+        <div class="text-item  m-4">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+                  <span>  
+                    𝑵𝒐 𝒐𝒏𝒆 𝒘𝒊𝒍𝒍 𝒖𝒏𝒅𝒆𝒓𝒔𝒕𝒂𝒏𝒅 𝒚𝒐𝒖 𝒄𝒐𝒎𝒑𝒍𝒆𝒕𝒆𝒍𝒚<br>
+                    هیچ‌کس تو رو کامل نخواهد فهمید‌‌
+                  </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                𝑵𝒐 𝒐𝒏𝒆 𝒘𝒊𝒍𝒍 𝒖𝒏𝒅𝒆𝒓𝒔𝒕𝒂𝒏𝒅 𝒚𝒐𝒖 𝒄𝒐𝒎𝒑𝒍𝒆𝒕𝒆𝒍𝒚
+                هیچ‌کس تو رو کامل نخواهد فهمید‌‌
+                    "></i>
+        </div>
+        </div><hr>
+
+        <div class="text-mother d-flex justify-content-around">
+          <div class="text-item">
+                <div>
+                  <img src="imags/babon.jpg"  width="60px">
+                </div>
+                <span>
+                  ʷʰᵉⁿ ⁱ ˡᵒˢᵗ, ⁱ ᵃᶜᵗ ⁱⁿ ˢᵘᶜʰ ᵃ ʷᵃʸ ᵗʰᵃᵗ ʸᵒᵘ ᵈᵒᵘᵇᵗ ʸᵒᵘʳ ᵛⁱᶜᵗᵒʳʸ<br>
+                  من تو باختم جوری رفتار میکنم که تو به برد خودت شک کنی‌‌
+                </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                ʷʰᵉⁿ ⁱ ˡᵒˢᵗ, ⁱ ᵃᶜᵗ ⁱⁿ ˢᵘᶜʰ ᵃ ʷᵃʸ ᵗʰᵃᵗ ʸᵒᵘ ᵈᵒᵘᵇᵗ ʸᵒᵘʳ ᵛⁱᶜᵗᵒʳʸ
+                من تو باختم جوری رفتار میکنم که تو به برد خودت شک کنی‌‌
+              "></i>
+        </div>
+             
+        <div class="text-item  m-4">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+                  <span>  
+                    When jumping is scary for you, that's exactly when you should jump‌‌<br>
+                    وقتی پریدن برات ترسناکه، دقیقا همون موقع است که باید بپری‌
+                  </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                When jumping is scary for you, that's exactly when you should jump‌‌
+                وقتی پریدن برات ترسناکه، دقیقا همون موقع است که باید بپری‌
+                    "></i>
+        </div>
+        </div><hr>
+
+        <div class="text-mother d-flex justify-content-around">
+          <div class="text-item">
+                <div>
+                  <img src="imags/babon.jpg"  width="60px">
+                </div>
+                <span>
+                  I talk with God about you...
+                  من درباره‌ی تو با خدا درد دل می‌کنم...
+                </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                I talk with God about you...
+                من درباره‌ی تو با خدا درد دل می‌کنم...
+              "></i>
+        </div>
+             
+        <div class="text-item  m-4">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+                  <span>  
+                    I may not be perfect but at least I'm not fake.<br>
+                    من شاید عالی نباشم اما حداقل جعلی نیستم.
+                  </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                I may not be perfect but at least I'm not fake.
+                من شاید عالی نباشم اما حداقل جعلی نیستم.
+                    "></i>
+        </div>
+        </div><hr>
+
+        <div class="text-mother d-flex justify-content-around">
+          <div class="text-item">
+                <div>
+                  <img src="imags/babon.jpg"  width="60px">
+                </div>
+                <span>
+                  I feel sad for you
+                  U lost me.<br>
+                  دلم برات میسوزه
+                  منو از دست دادی...
+                </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                I feel sad for you
+                U lost me.
+                دلم برات میسوزه
+                منو از دست دادی...
+              "></i>
+        </div>
+             
+        <div class="text-item  m-4">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+                  <span>  
+                    Don't let anyone step on your dreams.<br>
+                    اجازه نده هيچ كس پاشو رو روياهات بذاره.
+                  </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                  Don't let anyone step on your dreams.
+                  اجازه نده هيچ كس پاشو رو روياهات بذاره.
+                "></i>
+        </div>
+        </div><hr>
+
+        <div class="text-mother d-flex justify-content-around">
+          <div class="text-item">
+                <div>
+                  <img src="imags/babon.jpg"  width="60px">
+                </div>
+                <span>
+                  If life is hard, I am harder than it :<br>
+                  زندگی گر سخت باشد من از آن سخت ترم
+                </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                If life is hard, I am harder than it :
+                زندگی گر سخت باشد من از آن سخت ترم.
+              "></i>
+        </div>
+             
+        <div class="text-item  m-4">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+                  <span>  
+                    ʙᴇɢɪɴs ᴡʜᴇʀᴇ ғᴇᴀʀ ᴇɴᴅs..!<br>
+                    زندگی جایی شروع میشه که ترس تموم بشه...
+                  </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                ʙᴇɢɪɴs ᴡʜᴇʀᴇ ғᴇᴀʀ ᴇɴᴅs..!
+                زندگی جایی شروع میشه که ترس تموم بشه...
+                "></i>
+        </div>
+        </div><hr>
+     
+        <div class="text-mother d-flex justify-content-around">
+          <div class="text-item">
+                <div>
+                  <img src="imags/babon.jpg"  width="60px">
+                </div>
+                <span>
+                  We all are too simple for this complicated world<br>
+                  همه‌ی ما واسه این دنیای پیچیده، زیادی ساده ایم.
+                </span>
+                <i class="fas fa-heart heart-btn" data-text="
+                We all are too simple for this complicated world
+                همه‌ی ما واسه این دنیای پیچیده، زیادی ساده ایم.
+              "></i>
+        </div>
+        </div>
+        <footer class="foot  d-flex justify-content-around">
+          <h6 class="m-2">متن و جمله مورد علاقتان را برای ما بفرستید تا در سایت گذاشته شود♥️</h6>
+          <p> ایمیل: za.negahdari.96@gmail.com </p>
+          <p> ایدی تلگرام : zizi_24x</p>
+        </footer>
+
+    <script src="file/jquery-3.7.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // مقداردهی اولیه اگر وجود نداشت
+        if(localStorage.getItem('textFavorites') === null) {
+            localStorage.setItem('textFavorites', JSON.stringify([]));
+        }
+        
+        // بارگذاری لیست مورد علاقه‌ها
+        let favorites = JSON.parse(localStorage.getItem('textFavorites'));
+        
+        // تنظیم وضعیت اولیه قلب‌ها
+        $('.heart-btn').each(function() {
+            const text = $(this).data('text');
+            if(favorites.includes(text)) {
+                $(this).addClass('favorited');
+            }
+        });
+        
+        // کلیک روی قلب
+        $('.heart-btn').click(function() {
+            const text = $(this).data('text');
+            let favorites = JSON.parse(localStorage.getItem('textFavorites'));
+            
+            if($(this).hasClass('favorited')) {
+                // حذف از لیست
+                favorites = favorites.filter(item => item !== text);
+            } else {
+                // اضافه به لیست
+                if(!favorites.includes(text)) {
+                    favorites.push(text);
+                }
+            }
+            
+            // ذخیره در localStorage
+            localStorage.setItem('textFavorites', JSON.stringify(favorites));
+            
+            // تغییر وضعیت قلب
+            $(this).toggleClass('favorited');
+            
+            console.log('متن‌های ذخیره شده:', favorites);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="file/bootstrap.min.css.map">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>جمله های عاشقانه</title>
+    <style>
+        body{
+        margin: 0px;
+      }
+      .home-btn {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #4b9cf9;
+        border: none;
+        text-align: center;
+        font-size: 15px;
+        padding: 10px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        position: relative;
+        bottom: 50px;
+        text-decoration: none;
+}
+    .home-btn a {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+      text-decoration: none;
+      color: white;
+    }
+
+    .home-btn a:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    .home-btn:hover a {
+      padding-right: 25px;
+      
+    }
+    .home-btn:hover a:after {
+      opacity: 1;
+      right: 0;
+    }
+    .home-btn:hover{
+      background-color: yellow;
+      color: black;
+    } 
+      .carousel-inner{
+        position: relative;
+        bottom: 70px;
+      }
+      .titr1{
+        text-align: center;
+      }
+      .offcanvas-body >a{
+        text-decoration: none;
+        color: black;
+      }
+      .offcanvas-body >a :hover{
+        color:  rgb(67, 185, 245);
+      }
+      .offcanvas-header{
+         background-color: rgb(255, 255, 3);
+      }
+      .logo{
+       direction: rtl;
+       position: relative;
+       bottom: 50px;
+       margin-right: 60px;
+      
+      }
+      .title-page2{
+        text-align: center;
+        position: relative;
+        bottom: 40px;
+      }
+      .text-mother{
+        display: flex;
+        direction: rtl;
+      }
+       .text-item{
+        display: flex;
+        direction: rtl;
+       }
+       .text-item{
+        display: flex;
+        direction: rtl;
+       }
+
+           .heart-btn {
+            cursor: pointer;
+            color: #ccc;
+            font-size: 20px;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        .heart-btn.favorited {
+            color: #ff4757;
+        }
+        .heart-btn:hover {
+            transform: scale(1.1);
+        }
+        .favorites-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .foot{
+          direction: rtl;
+          margin-top: 50px;
+          border: 1px solid rgb(253, 253, 78);
+          background-color: rgb(253, 253, 78);
+        }
+       @media screen and (max-width: 500px) {
+        .text-mother{
+        flex-wrap: wrap;
+       }
+       .home-btn{
+        padding: 0px;
+        width: 150px;
+        position: relative;
+        bottom: 100px;
+       }
+       .foot{
+        flex-direction: column;
+       }
+   
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm " style="background-color:  rgb(253, 253, 78); height: 50px;">
+        <div class="container-fluid" style="direction: rtl">
+                <h6>
+                  اینجا بابونه سرزمینی پر از جمله های دلنشین و خفن
+                </h6>
+        </div>
+  </nav>
+  <header>
+    <div class="offcanvas offcanvas-end" id="demo">
+            <div class="offcanvas-header">
+                <h4 class="offcanvas-title">فهرست</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+            <a href="pag1.html"><p>
+             جمله های انگیزشی 
+            </p></a>
+
+            <a href="pag2.html"><p>
+             جمله های عاشقانه
+            </p></a>
+
+            <a href="pag3.html"><p>
+               عکس نوشته
+            </p></a>
+
+            <a href="pag4.html"><p>
+               توسعه فردی
+            </p></a>
+
+            <a href="pag5.html"><p>
+               بیو فارسی و انگلیسی
+            </p></a>
+
+            <a href="pag6.html"><p>
+              شعر های ناب 
+             </p></a>
+
+            <a href="favorites.htm"><p>
+             موردعلاقه من
+           </p></a>
+        </div>
+    </div>
+    
+    <div class="container-fluid mt-3" style="direction: rtl;">
+            <button   type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"  data-bs-toggle="tooltip" title="Hooray!">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30" >
+                    <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
+                    </svg>
+            </button>
+    </div>
+    <div class="logo" >
+        <img src="imags/logo.png" width="150px">
+      </div>
+      <button class="home-btn">
+        <a  href="index.html">بازگشت به صفحه اول</a>
+     </button>
+</header>
+   <div class="title-page2">
+            <h3>  ----جمله های عاشقانه----</h3>
+   </div>
+   <div class="text-mother  d-flex justify-content-around">
+    <div class="text-item">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+          <span> 
+            میگن کار خوب کنے میرے بهشـ᪲ٮــ<br>
+            من نمیدونم چه کار خوبے کردم که
+            خدا بهشـ᪲ٮــ رو براے من آورده روے زمین<br>
+            بهشت منے عشق جانم🙂‍↔️🌸👩🏻‍❤‍💋‍👨🏻⫖☁️
+          </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          میگن کار خوب کنے میرے بهشـ᪲ٮــ
+          من نمیدونم چه کار خوبے کردم که
+          خدا بهشـ᪲ٮــ رو براے من آورده روے زمین
+          بهشت منے عشق جانم🙂‍↔️🌸👩🏻‍❤‍💋‍👨🏻⫖
+        "></i>
+  </div>
+       
+  <div class="text-item  m-4">
+    <div>
+      <img src="imags/babon.jpg"  width="60px">
+    </div>
+            <span>  
+              اگه درمورد تو از من سوال کنن:<br>
+               میگم اون قوتِ قلب من، تویِ تک تک نبردهای زندگیِ .
+            </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          اگه درمورد تو از من سوال کنن:
+          میگم اون قوتِ قلب من، تویِ تک تک نبردهای زندگیِ .
+              "></i>
+  </div>
+  </div><hr>
+
+  <div class="text-mother">
+    <div class="text-item">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+          <span> 
+            فقط شنیدن صدات ڪافیہ ڪہ همہ چیز از یادم بره!
+            ازم دریغش نڪن🥹
+            ✨–⊰❉⊱–✨
+          </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          فقط شنیدن صدات ڪافیہ ڪہ همہ چیز از یادم بره!
+          ازم دریغش نڪن🥹
+          ✨–⊰❉⊱–✨
+        "></i>
+  </div>
+       
+  <div class="text-item  m-4">
+    <div>
+      <img src="imags/babon.jpg"  width="60px">
+    </div>
+            <span>  
+              بی شک تو عجیب ترین
+              فیلم زندگی من هستی<br>
+              من با تو<br>
+              هم میخندم<br>
+              هم میگریم<br>
+              هم سکوت می کنم<br>
+              هم بی مهابا دست به عاشقی میزنم
+              ژانر دیوانه کننده ای داری جانم🫂
+            </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          بی شک تو عجیب ترین
+          فیلم زندگی من هستی
+          من با تو
+          هم میخندم
+          هم میگریم
+          هم سکوت می کنم
+          هم بی مهابا دست به عاشقی میزنم
+          ژانر دیوانه کننده ای داری جانم🫂
+              "></i>
+  </div>
+  </div><hr>
+
+  <div class="text-mother  d-flex justify-content-around">
+    <div class="text-item">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+          <span> 
+            میدونیِ‌ڪجایِ‌رابطمون‌قَشنگه؟<br>
+            نه،ڪجـا؟
+            اونجاڪه‌همه‌میگن :
+            مثل‌اون‌دُوتاڪِه‌بهَم‌رسیدَن💍
+          </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          میدونیِ‌ڪجایِ‌رابطمون‌قَشنگه؟
+          نه،ڪجـا؟
+          اونجاڪه‌همه‌میگن :
+          مثل‌اون‌دُوتاڪِه‌بهَم‌رسیدَن💍
+        "></i>
+  </div>
+       
+  <div class="text-item  m-4">
+    <div>
+      <img src="imags/babon.jpg"  width="60px">
+    </div>
+            <span>  
+              ميگه وقتي خواستي از زيباييش تعريف كني<br>
+              زُل بزن تو چشماش و مثل حافظ بهش بگو：<br>
+              «در دستِ كسي هيچ نيفتد<br>
+              زين خوب‌تر نگاري . . .»
+              يعني ديگه خفن تر و زيباتر از تو نيست👀
+            </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          ميگه وقتي خواستي از زيباييش تعريف كني
+               زُل بزن تو چشماش و مثل حافظ بهش بگو：
+               «در دستِ كسي هيچ نيفتد
+               زين خوب‌تر نگاري . . .»
+               يعني ديگه خفن تر و زيباتر از تو نيست👀
+              "></i>
+  </div>
+  </div><hr>
+
+  
+  <div class="text-mother d-flex justify-content-around">
+    <div class="text-item">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+          <span> 
+            سیوش کن Irripetibile یعنی：<br>
+            کسی که هرچقدر هم زمان بگذره<br>
+            بازم واست تکراری نمیشه‌ و هرروز‌<br>
+            بیشتر از‌ قبل دوسش داری‌
+            یه عشق تکرار نشدنی . . .👫🏻
+          </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          سیوش کن Irripetibile یعنی：
+          کسی که هرچقدر هم زمان بگذره
+          بازم واست تکراری نمیشه‌ و هرروز‌
+          بیشتر از‌ قبل دوسش داری‌
+          یه عشق تکرار نشدنی . . .👫🏻
+        "></i>
+  </div>
+       
+  <div class="text-item  m-4">
+    <div>
+      <img src="imags/babon.jpg"  width="60px">
+    </div>
+            <span>  
+              واسه‌ خودم و خودت‌
+              رسیدن میخوام<br>
+              از‌ اون‌ رسیدن‌هایی‌ که‌
+              هیچی‌ نتونه‌ خرابش‌ کنه . . .💍
+            </span>
+          <i class="fas fa-heart heart-btn" data-text="
+              واسه‌ خودم و خودت‌
+               رسیدن میخوام
+               از‌ اون‌ رسیدن‌هایی‌ که‌
+               هیچی‌ نتونه‌ خرابش‌ کنه . . .💍
+              "></i>
+  </div>
+  </div><hr>
+
+    
+  <div class="text-mother  d-flex justify-content-around">
+    <div class="text-item">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+          <span> 
+            تو یه ورژن از خوده منی که<br>
+            بین این همه آدم پیدات کردم
+            و حالا خنده هات ، خنده ی منه<br>
+            و ناراحتیتم ، ناراحتیه من . . .
+          </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          تو یه ورژن از خوده منی که
+          بین این همه آدم پیدات کردم
+          و حالا خنده هات ، خنده ی منه
+          و ناراحتیتم ، ناراحتیه من . . .
+        "></i>
+  </div>
+       
+  <div class="text-item  m-4">
+    <div>
+      <img src="imags/babon.jpg"  width="60px">
+    </div>
+            <span>  
+              من میتونم کنارت به خود اصلیم برسم<br>
+              میتونم به همونی که ارومه برسم<br>
+              همونی که خوشحاله
+              همونی که خوبه حالش
+              عشقم خیلی دوست دارم .
+            </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          من میتونم کنارت به خود اصلیم برسم
+          میتونم به همونی که ارومه برسم
+          همونی که خوشحاله
+          همونی که خوبه حالش
+          عشقم خیلی دوست دارم .
+              "></i>
+  </div>
+  </div><hr>
+
+  <div class="text-mother  d-flex justify-content-around">
+    <div class="text-item">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+          <span> 
+            تو همیشه بخشی از وجود منی<br>
+            شدیدا دوست داشتنی
+            شدیدا قابل ستایش
+            شدیدا آرام‌بخش
+          </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          تو همیشه بخشی از وجود منی
+          شدیدا دوست داشتنی
+          شدیدا قابل ستایش
+          شدیدا آرام‌بخش
+        "></i>
+  </div>
+       
+  <div class="text-item  m-4">
+    <div>
+      <img src="imags/babon.jpg"  width="60px">
+    </div>
+            <span>  
+              دوست‌داشتنت راباقلبم امضا کردم توبا آغوشت مهرش کن!🌸✨
+            </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          دوست‌داشتنت راباقلبم امضا کردم توبا آغوشت مهرش کن!🌸✨
+              "></i>
+  </div>
+  </div><hr>
+
+  <div class="text-mother d-flex justify-content-around">
+    <div class="text-item">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+          <span> 
+            شاملو چه قشنگ میگه：<br>
+            قلب من به این امید می‌تپد که تو هستی<br>
+            تویی وجود دارد که من میتوانم آن را ببینم<br>
+            او را ببوسم ، اورا در آغوش خود بفشارم<br>
+            و او را احساس کنم
+            وجودت اینجوری تو زندگی من واجبه
+          </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          شاملو چه قشنگ میگه：
+          قلب من به این امید می‌تپد که تو هستی
+          تویی وجود دارد که من میتوانم آن را ببینم
+          او را ببوسم ، اورا در آغوش خود بفشارم
+          و او را احساس کنم
+          وجودت اینجوری تو زندگی من واجبه
+        "></i>
+  </div>
+       
+  <div class="text-item  m-4">
+    <div>
+      <img src="imags/babon.jpg"  width="60px">
+    </div>
+            <span>  
+           
+              قلبم تندتر میزنه وقتی تو اسم منو صدا میزنی!💙
+            </span>
+          <i class="fas fa-heart heart-btn" data-text="
+       
+          قلبم تندتر میزنه وقتی تو اسم منو صدا میزنی!💙
+              "></i>
+  </div>
+  </div><hr>
+
+  <div class="text-mother  d-flex justify-content-around">
+    <div class="text-item">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+          <span> 
+            و آرام میگیرم <br>
+            درمیان آغوش تو
+            همانند قطره ای باران در دل اقیانوس♥️🌎🌊
+          </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          و آرام میگیرم 
+               درمیان آغوش تو
+               همانند قطره ای باران در دل اقیانوس♥️🌎🌊
+        "></i>
+  </div>
+       
+  <div class="text-item  m-4">
+    <div>
+      <img src="imags/babon.jpg"  width="60px">
+    </div>
+            <span>  
+           
+              میخوام‌بیام‌بغلت‌فقط‌غر‌بزنم‌وتوبالبخندبهم‌گوش‌بدی‌خب؟💙
+            </span>
+          <i class="fas fa-heart heart-btn" data-text="
+       
+          میخوام‌بیام‌بغلت‌فقط‌غر‌بزنم‌وتوبالبخندبهم‌گوش‌بدی‌خب؟💙
+              "></i>
+  </div>
+  </div><hr>
+
+  <div class="text-mother  d-flex justify-content-around">
+    <div class="text-item">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+          <span> 
+            ماھ امشب خیلی کامل و خوشگلھ!<br>
+            فکر کنم نھایت سعیشو کردھ
+            شبیھ ٹُوᨖ باشھ🙂‍↔️🌕
+          </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          ماھ امشب خیلی کامل و خوشگلھ!<br>
+          فکر کنم نھایت سعیشو کردھ
+          شبیھ ٹُوᨖ باشھ🙂‍↔️🌕
+        "></i>
+  </div>
+       
+  <div class="text-item  m-4">
+    <div>
+      <img src="imags/babon.jpg"  width="60px">
+    </div>
+            <span>  
+         
+              دوست دارمت بی اختیار، مثل نفس کشیدن!💕
+            </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          دوست دارمت بی اختیار، مثل نفس کشیدن!💕
+              "></i>
+  </div>
+  </div><hr>
+
+  <div class="text-mother d-flex justify-content-around">
+    <div class="text-item">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+          <span> 
+            ماھ امشب خیلی کامل و خوشگلھ!<br>
+            فکر کنم نھایت سعیشو کردھ
+            شبیھ ٹُوᨖ باشھ🙂‍↔️🌕
+          </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          ماھ امشب خیلی کامل و خوشگلھ!<br>
+          فکر کنم نھایت سعیشو کردھ
+          شبیھ ٹُوᨖ باشھ🙂‍↔️🌕
+        "></i>
+  </div>
+       
+  <div class="text-item  m-4">
+    <div>
+      <img src="imags/babon.jpg"  width="60px">
+    </div>
+            <span>  
+         
+              دوست دارمت بی اختیار، مثل نفس کشیدن!💕
+            </span>
+          <i class="fas fa-heart heart-btn" data-text="
+    
+              "></i>
+  </div>
+  </div><hr>
+
+  <div class="text-mother  d-flex justify-content-around">
+    <div class="text-item">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+          <span> 
+            ﮼من اگه آسمون بودم خورشیدم تو بودی،<br>
+            همونقدر مهم و زندگی بخشی، اصلا مهم نیست <br>
+            من چی باشم تو همیشه با بودنت منو از نقطه تاریک زندگیم بیرون میکشی !
+          </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          ﮼من اگه آسمون بودم خورشیدم تو بودی،
+          همونقدر مهم و زندگی بخشی، اصلا مهم نیست 
+          من چی باشم تو همیشه با بودنت منو از نقطه تاریک زندگیم بیرون میکشی !
+        "></i>
+  </div>
+       
+  <div class="text-item  m-4">
+    <div>
+      <img src="imags/babon.jpg"  width="60px">
+    </div>
+            <span>  
+              ﮼تو قشنگترین دلیل برای نشون دادن مهربونی خدا روی زمینی !
+            </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          ﮼تو قشنگترین دلیل برای نشون دادن مهربونی خدا روی زمینی !
+              "></i>
+  </div>
+  </div><hr>
+
+  <div class="text-mother  d-flex justify-content-around">
+    <div class="text-item">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+          <span> 
+            برای اونیکه کیلومتر ها ازت دوره و هر ثانیه دلتنگشی،<br>
+            این متن هوشنگ ابتهاج جواب قشنگیه:<br>
+            ‹عزیزم پاک کن از چهره ات اشک را<br>
+            ز‌ جا برخیز
+            تو‌ در من زنده ای من در تو<br>
+            ما هرگز نمیمیریم🤍🌱
+          </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          برای اونیکه کیلومتر ها ازت دوره و هر ثانیه دلتنگشی،
+          این متن هوشنگ ابتهاج جواب قشنگیه:
+          ‹عزیزم پاک کن از چهره ات اشک را
+          ز‌ جا برخیز
+          تو‌ در من زنده ای من در تو
+          ما هرگز نمیمیریم🤍🌱
+        "></i>
+  </div>
+       
+  <div class="text-item  m-4">
+    <div>
+      <img src="imags/babon.jpg"  width="60px">
+    </div>
+            <span> 
+              متخصص داخلی فقط خودت که وقتی بهم میریزم<br>
+              تو دو دقیقه آرومم میکنی🤍🫂✨
+            </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          متخصص داخلی فقط خودت که وقتی بهم میریزم
+          تو دو دقیقه آرومم میکنی🤍🫂✨
+              "></i>
+  </div>
+  </div><hr>
+
+  <div class="text-mother  d-flex justify-content-around">
+    <div class="text-item">
+          <div>
+            <img src="imags/babon.jpg"  width="60px">
+          </div>
+          <span> 
+            ولی‌ هیچکس‌ چشماش‌ مثلِ تو قشنگ‌ نیست،<br>
+            هیچکس‌ مثل‌ تو‌ نمیتونه‌ انقدر قشنگ‌ بخنده،<br>
+            هیچکس‌ به‌اندازه‌ تو برام‌ دوست‌داشتنی‌ نیست،‌<br>
+            تو کاری‌ میکنی‌ که‌ حتی‌ قلبمم‌ لبخند میزنه
+          </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          ولی‌ هیچکس‌ چشماش‌ مثلِ تو قشنگ‌ نیست،
+          هیچکس‌ مثل‌ تو‌ نمیتونه‌ انقدر قشنگ‌ بخنده،
+          هیچکس‌ به‌اندازه‌ تو برام‌ دوست‌داشتنی‌ نیست،‌
+          تو کاری‌ میکنی‌ که‌ حتی‌ قلبمم‌ لبخند میزنه🌱
+        "></i>
+  </div>
+       
+  <div class="text-item  m-4">
+    <div>
+      <img src="imags/babon.jpg"  width="60px">
+    </div>
+            <span> 
+              آنقدر دوستت دارم که<br>
+              خودم هم نمی‌دانم چقدر دوستت دارم<br>
+              هربار که می‌پرسی چقدر؟<br>
+              با خودم فکر می‌کنم دریا چطور حساب موج‌هایش را نگه دارد🌊
+            </span>
+          <i class="fas fa-heart heart-btn" data-text="
+          آنقدر دوستت دارم که
+          خودم هم نمی‌دانم چقدر دوستت دارم
+          هربار که می‌پرسی چقدر؟
+          با خودم فکر می‌کنم دریا چطور حساب موج‌هایش را نگه دارد🌊
+              "></i>
+  </div>
+  </div>
+     <footer class="foot  d-flex justify-content-around">
+          <h6 class="m-2">متن و جمله مورد علاقتان را برای ما بفرستید تا در سایت گذاشته شود♥️</h6>
+          <p> ایمیل: za.negahdari.96@gmail.com </p>
+          <p> ایدی تلگرام : zizi_24x</p>
+     </footer>
+     </div>
+<script src="file/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // مقداردهی اولیه اگر وجود نداشت
+        if(localStorage.getItem('textFavorites') === null) {
+            localStorage.setItem('textFavorites', JSON.stringify([]));
+        }
+        
+        // بارگذاری لیست مورد علاقه‌ها
+        let favorites = JSON.parse(localStorage.getItem('textFavorites'));
+        
+        // تنظیم وضعیت اولیه قلب‌ها
+        $('.heart-btn').each(function() {
+            const text = $(this).data('text');
+            if(favorites.includes(text)) {
+                $(this).addClass('favorited');
+            }
+        });
+        
+        // کلیک روی قلب
+        $('.heart-btn').click(function() {
+            const text = $(this).data('text');
+            let favorites = JSON.parse(localStorage.getItem('textFavorites'));
+            
+            if($(this).hasClass('favorited')) {
+                // حذف از لیست
+                favorites = favorites.filter(item => item !== text);
+            } else {
+                // اضافه به لیست
+                if(!favorites.includes(text)) {
+                    favorites.push(text);
+                }
+            }
+            
+            // ذخیره در localStorage
+            localStorage.setItem('textFavorites', JSON.stringify(favorites));
+            
+            // تغییر وضعیت قلب
+            $(this).toggleClass('favorited');
+            
+            console.log('متن‌های ذخیره شده:', favorites);
+        });
+    });
+</script>
+</body>
+</html>

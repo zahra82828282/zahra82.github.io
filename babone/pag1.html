@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="file/bootstrap.min.css.map">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>جمله های انگیزشی</title>
+     <style>
+      body{
+        margin: 0px;
+      }
+      .home-btn {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #4b9cf9;
+        border: none;
+        text-align: center;
+        font-size: 15px;
+        padding: 10px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        position: relative;
+        bottom: 50px;
+        text-decoration: none;
+}
+    .home-btn a {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+      text-decoration: none;
+      color: white;
+    }
+
+    .home-btn a:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    .home-btn:hover a {
+      padding-right: 25px;
+      
+    }
+    .home-btn:hover a:after {
+      opacity: 1;
+      right: 0;
+    }
+    .home-btn:hover{
+      background-color: yellow;
+      color: black;
+    } 
+      .carousel-inner{
+        position: relative;
+        bottom: 70px;
+      }
+      .titr1{
+        text-align: center;
+      }
+      .txt-nav{
+        position: relative;
+         bottom: 120px;
+      }
+      .offcanvas-body >a{
+        text-decoration: none;
+        color: black;
+      }
+      .offcanvas-body >a :hover{
+        color:  rgb(67, 185, 245);
+      }
+      .offcanvas-header{
+         background-color: rgb(255, 255, 3);
+      }
+      .logo{
+       direction: rtl;
+       position: relative;
+       bottom: 50px;
+       margin-right: 60px;
+      
+      }
+      .titlee{
+        text-align: center;
+        position: relative;
+        bottom: 60px;
+      }
+      .text-mother{
+        display: flex;
+        direction: rtl;
+      }
+       .text-item{
+        display: flex;
+        direction: rtl;
+       }
+       .text-item{
+        display: flex;
+        direction: rtl;
+       }
+   
+       .heart-btn {
+            cursor: pointer;
+            color: #ccc;
+            font-size: 20px;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        .heart-btn.favorited {
+            color: #ff4757;
+        }
+        .heart-btn:hover {
+            transform: scale(1.1);
+        }
+        .favorites-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .foot{
+          direction: rtl;
+          margin-top: 50px;
+          border: 1px solid rgb(253, 253, 78);
+          background-color: rgb(253, 253, 78);
+        }
+
+       @media screen and (max-width: 500px) {
+       .text-mother{
+        flex-wrap: wrap;
+       }
+       .home-btn{
+        padding: 0px;
+        width: 150px;
+        position: relative;
+        bottom: 100px;
+       }
+       .foot{
+        flex-direction: column;
+       }
+   
+      }
+   
+     </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm " style="background-color:  rgb(253, 253, 78); height: 50px;">
+        <div class="container-fluid" style="direction: rtl">
+                <h6>
+                  اینجا بابونه سرزمینی پر از جمله های دلنشین و خفن
+                </h6>
+        </div> 
+  </nav>
+  <header>
+    <div class="offcanvas offcanvas-end" id="demo">
+            <div class="offcanvas-header">
+                <h4 class="offcanvas-title">فهرست</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+            <a href="pag1.html"><p>
+             جمله های انگیزشی 
+            </p></a>
+
+            <a href="pag2.html"><p>
+             جمله های عاشقانه
+            </p></a>
+
+            <a href="pag3.html"><p>
+             عکس نوشته
+            </p></a>
+
+            <a href="pag4.html"><p>
+            توسعه فردی 
+            </p></a>
+
+            <a href="pag5.html"><p>
+               بیو فارسی و انگلیسی
+            </p></a>
+
+            <a href="pag6.html"><p>
+              شعر های ناب 
+             </p></a>
+                
+            <a href="favorites.htm"><p>
+             مورد علاقه ها
+           </p></a>
+        </div>
+    </div>
+    
+    <div class="container-fluid mt-3" style="direction: rtl;">
+            <button   type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"  data-bs-toggle="tooltip" title="Hooray!">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30" >
+                    <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
+                    </svg>
+            </button>
+    </div>
+    <div class="logo" >
+        <img src="imags/logo.png" width="150px">
+      </div>
+      <button class="home-btn">
+       <a  href="index.html">بازگشت به صفحه اول</a>
+    </button>
+</header>
+    <div class="titlee">
+        <h3> ----جمله های انگیزشی-----</h3>
+    </div>
+
+    <div class="text-mother  d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span>«و من خودم را با خستگی تمام از میان این فصل عبور می‌دهم، <br>
+              به این امیدِ نور کم‌سویی که در دوردست‌ها می‌درخشد.»<br>
+              - اولگا کنیپر / نامه به آنتوان چخوف</span>
+            <i class="fas fa-heart heart-btn" data-text="«و من خودم را با خستگی تمام از میان این فصل عبور می‌دهم، به این امیدِ نور کم‌سویی که در دوردست‌ها می‌درخشد.»
+              - اولگا کنیپر / نامه به آنتوان چخوف
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  شادی در لحظات ساده‌ی زندگی، در ارتباطات، تجربیات و<br>
+                 حتی در قدردانی از چیزهای کوچک اطرافمون پنهانه<br>
+                نابراین، به جای انتظار برای شرایط ایده‌آل، باید یاد بگیریم،
+                در همین لحظه و با هر چیزی که داریم، خوشحال باشیم
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="  شادی در لحظات ساده‌ی زندگی، در ارتباطات، تجربیات و حتی در قدردانی از چیزهای کوچک اطرافمون پنهانه
+              نابراین، به جای انتظار برای شرایط ایده‌آل، باید یاد بگیریم، در همین لحظه و با هر چیزی که داریم، خوشحال باشیم
+                "></i>
+    </div>
+    </div><hr>
+
+    <div class="text-mother  d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+                باید
+                هر روز
+                به خودمون یادآوری کنیم:
+                این زندگی و تموم روزاش
+                فقط و فقط یکبار میان!<br>
+                پس"زندگی کنیم هر لحظه رو"..
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="باید
+            هر روز
+            به خودمون یادآوری کنیم:
+            این زندگی و تموم روزاش
+            فقط و فقط یکبار میان!
+            پس باید همین حال زندگی کنیم
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  موش‌ِکور پرسید: «بهترین کشفت توی زندگی چی بوده؟»<br>
+                پسرک جواب داد: «این‌که من کافی‌ام ، همین جوری که هستم .»
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="  موش‌ِکور پرسید: «بهترین کشفت توی زندگی چی بوده؟»
+              پسرک جواب داد: «این‌که من کافی‌ام ، همین جوری که هستم .»
+              
+                "></i>
+    </div>
+    </div><hr>
+    
+    <div class="text-mother  d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+              خودت رو آماده کن برای روزایی که جز خودت، کسی رو نخواهی داشت.<br>
+              اونقدر قوی باش که اگه بی هوا زیر پات رو‌خالی کردن، زمین نخوری.<br>
+              به امید هیچکس نباش اینجا کسی حواسش به‌ تو نیست.
+              خودت هوای خودت رو داشته باش...
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            خودت رو آماده کن برای روزایی که جز خودت، کسی رو نخواهی داشت.
+            اونقدر قوی باش که اگه بی هوا زیر پات رو‌خالی کردن، زمین نخوری.
+            به امید هیچکس نباش اینجا کسی حواسش به‌ تو نیست.
+            خودت هوای خودت رو داشته باش...
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  
+                خوشحال بودن  یا حفظ روحیه در جایی که همه غمگینن 
+                و ناامیدن خیلی کار سختیه<br>
+                اگر میتونی اینکار بکنی بهت افتخار میکنم
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            خوشحال بودن  یا حفظ روحیه در جایی که همه غمگینن و ناامیدن خیلی کار سختیه
+            اگر میتونی اینکار بکنی بهت افتخار میکنم
+              
+                "></i>
+    </div>
+    </div><hr>
+
+    <div class="text-mother  d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+              به مسيري كه خدا برات در نظر گرفته شك نكن<br>
+              خدا هميشه بهترين ها رو برات در نظر ميگيره
+              شايد اولش نااميد بشي ولي آخرش قشنگه<br>
+              هيچوقت به زمان بندي خدا شك نكن.
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            به مسيري كه خدا برات در نظر گرفته شك نكن
+            خدا هميشه بهترين ها رو برات در نظر ميگيره
+            شايد اولش نااميد بشي ولي آخرش قشنگه
+            هيچوقت به زمان بندي خدا شك نكن.
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  
+                ‏اونجایی که قوی تر از بهونه‌هات بودی.<br>
+                -اونجایی که باورت نکردن و باز هم ادامه دادی.<br>
+                -اونجایی که تلاش میکردی و هیچ‌کس تو رو نمیدید.<br>
+                -اون‌جایی که حرف‌های پشت سرت رو میشنیدی و سکوت میکردی.<br>
+                دقیقا همون روزا داشتی رشد میکردی؛<br>
+                ممنونِ خودت باش بابتِ کسی که این‌روزا هستی
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            ‏اونجایی که قوی تر از بهونه‌هات بودی.
+            -اونجایی که باورت نکردن و باز هم ادامه دادی.
+            -اونجایی که تلاش میکردی و هیچ‌کس تو رو نمیدید.
+            -اون‌جایی که حرف‌های پشت سرت رو میشنیدی و سکوت میکردی.
+            دقیقا همون روزا داشتی رشد میکردی؛
+            ممنونِ خودت باش بابتِ کسی که این‌روزا هستی
+              
+                "></i>
+    </div>
+    </div><hr>
+
+    <div class="text-mother  d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+              ‏همه چيز التيام خواهد يافت.
+              بدن‌ت بهبودی می‌يابد،<br>
+              قلبت شفا می‌گيرد،
+              زخم‌ها خوب می‌شوند،
+              ذهن ترميم می‌شود
+              و روح برمی‌‌‌گردد.<br>
+              شادمانی باز خواهد گشت
+              و دوران بد هميشگی نيست
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            ‏همه چيز التيام خواهد يافت.
+            بدن‌ت بهبودی می‌يابد،
+            قلبت شفا می‌گيرد،
+            زخم‌ها خوب می‌شوند،
+            ذهن ترميم می‌شود
+            و روح برمی‌‌‌گردد.
+            شادمانی باز خواهد گشت
+            و دوران بد هميشگی نيست
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  
+                ‏بپذیرید ، همه چیز رو بپذیرید و رها کنید. اگر کسی دوستون نداره.<br>
+                اگر کسی باهاتون ارتباطشو ‌کم میکنه.اگر کسی ازتون متنفره،<br>
+                 اگر کسی ازتون دور میشه.
+                 اگر زندگی اون طور که میخواستین پیش نمیره.<br> 
+                هیچی جز پذیرش نشون نمیده چقدر بالغ هستین.
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            ‏بپذیرید ، همه چیز رو بپذیرید و رها کنید. اگر کسی دوستون نداره.
+            اگر کسی باهاتون ارتباطشو ‌کم میکنه.اگر کسی ازتون متنفره،
+             اگر کسی ازتون دور میشه.
+             اگر زندگی اون طور که میخواستین پیش نمیره. 
+            هیچی جز پذیرش نشون نمیده چقدر بالغ هستین.
+               
+                "></i>
+    </div>
+    </div><hr>
+
+    <div class="text-mother  d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+              هر وقت خواستی جا بزنی...<br>
+              به حس خوب بعد از نتیجه گرفتن، به آخیش گفتن بعد رسیدن<br>
+               به برآورده‌شدن آرزوها، به حس رضایت درونی،<br>
+               به خنده‌ی از ته دل، به اشک شوق مادر،
+               به لبخندِ مغرورانه پدر فکر کن و ادامه بده!<br>
+              فقط ادامه بده.
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            هر وقت خواستی جا بزنی...
+            به حس خوب بعد از نتیجه گرفتن، به آخیش گفتن بعد رسیدن
+             به برآورده‌شدن آرزوها، به حس رضایت درونی،
+             به خنده‌ی از ته دل، به اشک شوق مادر،
+             به لبخندِ مغرورانه پدر فکر کن و ادامه بده!
+            فقط ادامه بده.
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  
+                خوشحال بودن  یا حفظ روحیه در جایی که همه غمگینن و ناامیدن خیلی کار سختیه<br>
+                اگر میتونی اینکار بکنی بهت افتخار میکنم
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            خوشحال بودن  یا حفظ روحیه در جایی که همه غمگینن و ناامیدن خیلی کار سختیه
+            اگر میتونی اینکار بکنی بهت افتخار میکنم
+               
+                "></i>
+    </div>
+    </div><hr>
+
+    <div class="text-mother  d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+              ـو قسم به لحظاتی که تمام توان و تحملت<br>
+              به پایان رسیده بود، اما تو دوباره دوام می‌آوردی<br>
+              -و قسم به تمام لحظاتی که قلبت از شدت اندوه فشرده شده بود،<br>
+               اما لبخندهایت را دریغ نمی‌کردی<br>
+              ـقسم به تمام لحظه‌هایی که نیاز داشتی کسی کنارت باشد، 
+              اما هیچ‌کس را جز خودت نیافتی.<br>
+              "تو به ‌اندازه تمام آن لحظه ها، سبز خواهی شد و جوانه خواهی زد،<br>
+               جوری که انگار آن روزهای تلخ، توهمی بیش نبوده‌اند
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            ـو قسم به لحظاتی که تمام توان و تحملت
+            به پایان رسیده بود، اما تو دوباره دوام می‌آوردی
+            -و قسم به تمام لحظاتی که قلبت از شدت اندوه فشرده شده بود،
+             اما لبخندهایت را دریغ نمی‌کردی
+            ـقسم به تمام لحظه‌هایی که نیاز داشتی کسی کنارت باشد، 
+            اما هیچ‌کس را جز خودت نیافتی.
+            و به ‌اندازه تمام آن لحظه ها، سبز خواهی شد و جوانه خواهی زد،تو
+             جوری که انگار آن روزهای تلخ، توهمی بیش نبوده‌اند
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  
+                من از زندگی فقط همین را می‌خواهم؛<br>
+                زندگی کردن به شکلی که خودم می‌خواهم و نه به شکلی که دیگران می‌خواهند
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            من از زندگی فقط همین را می‌خواهم؛
+            زندگی کردن به شکلی که خودم می‌خواهم و نه به شکلی که دیگران می‌خواهند
+               
+                "></i>
+    </div>
+    </div><hr>
+
+    <div class="text-mother  d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+              از چیزهای کوچک در زندگیتان لذت ببرید<br>
+              چون روزی به گذشته نگاه می‌کنید
+              و متوجه می‌شوید
+              آن‌ها چیزهای بزرگی بوده‌اند…
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            از چیزهای کوچک در زندگیتان لذت ببرید
+            چون روزی به گذشته نگاه می‌کنید
+            و متوجه می‌شوید
+            آن‌ها چیزهای بزرگی بوده‌اند…
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  
+                برنده شدن همیشه به معنی اولین بودن نیست،<br>
+                برنده شدن به معنی انجام کار بهتر از دفعات قبل است.
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            برنده شدن همیشه به معنی اولین بودن نیست،
+            برنده شدن به معنی انجام کار بهتر از دفعات قبل است.
+                "></i>
+    </div>
+    </div><hr>
+<div class="text-mother  d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+              از چیزهای کوچک در زندگیتان لذت ببرید<br>
+              چون روزی به گذشته نگاه می‌کنید
+              و متوجه می‌شوید
+              آن‌ها چیزهای بزرگی بوده‌اند…
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            از چیزهای کوچک در زندگیتان لذت ببرید
+            چون روزی به گذشته نگاه می‌کنید
+            و متوجه می‌شوید
+            آن‌ها چیزهای بزرگی بوده‌اند…
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  
+                برنده شدن همیشه به معنی اولین بودن نیست،<br>
+                برنده شدن به معنی انجام کار بهتر از دفعات قبل است.
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            برنده شدن همیشه به معنی اولین بودن نیست،
+            برنده شدن به معنی انجام کار بهتر از دفعات قبل است.
+                "></i>
+    </div>
+    </div><hr>
+
+    <div class="text-mother d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+              زندگی کن<br>
+              مهربانم سخت نگیر
+              رونق عمر جهان چند صباحی گذراست<br>
+              دل اگر می شکند
+              گل اگر می میرد<br>
+              و اگر باغ به خود رنگ خزان میگیرد<br>
+              همه هشدار به توست
+              نازنینم سخت نگیر
+              زندگی کوچ همین چلچله هاست<br>
+              به همین زیبایی، به همین کوتاهی..
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            زندگی کن
+            مهربانم سخت نگیر
+            رونق عمر جهان چند صباحی گذراست
+            دل اگر می شکند
+            گل اگر می میرد
+            و اگر باغ به خود رنگ خزان میگیرد<br>
+            همه هشدار به توست
+            نازنینم سخت نگیر
+            زندگی کوچ همین چلچله هاست
+            به همین زیبایی، به همین کوتاهی..
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  
+                اول بهار که همه بلندن<br>
+                یک زندگی تازه رو شروع کنن
+                مهم اینه که از اول پاییز بتونی
+                از نو شروع کنی
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            اول بهار که همه بلندن
+            یک زندگی تازه رو شروع کنن
+            مهم اینه که از اول پاییز بتونی
+            از نو شروع کنی
+                "></i>
+    </div>
+    </div><hr>
+
+    <div class="text-mother  d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+              از چیزهای کوچک در زندگیتان لذت ببرید<br>
+              چون روزی به گذشته نگاه می‌کنید
+              و متوجه می‌شوید
+              آن‌ها چیزهای بزرگی بوده‌اند… ☁️🥑🌸
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            از چیزهای کوچک در زندگیتان لذت ببرید
+            چون روزی به گذشته نگاه می‌کنید
+            و متوجه می‌شوید
+            آن‌ها چیزهای بزرگی بوده‌اند… ☁️🥑🌸
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  
+                حال بهتری خواهیم داشت اگر دست برداریم<br>
+                از فردی که لیاقت محبت ندارد
+                دشمنی که ارزش جنگیدن ندارد<br>
+                حقی که ارزش گرفتن ندارد
+                و فکری که ارزش اندیشیدن ندارد!
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            حال بهتری خواهیم داشت اگر دست برداریم
+            از فردی که لیاقت محبت ندارد
+            دشمنی که ارزش جنگیدن ندارد
+            حقی که ارزش گرفتن ندارد
+            و فکری که ارزش اندیشیدن ندارد!
+                "></i>
+    </div>
+    </div><hr>
+    
+    <div class="text-mother  d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+              برای لذت‌بردن از زندگی<br>
+              نباید منتظر کامل‎شدن و بی‎نقص‎بودن آن باشیم،
+              چرا که جهان
+              زودگذرتر از آن است<br>
+              که بتوانیم بسیاری از شرایط را
+              دوباره تجربه کنی...✨☁️
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            برای لذت‌بردن از زندگی
+            نباید منتظر کامل‎شدن و بی‎نقص‎بودن آن باشیم،
+            چرا که جهان
+            زودگذرتر از آن است
+            که بتوانیم بسیاری از شرایط را
+            دوباره تجربه کنی...✨☁️
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  
+                  اول بهار که همه بلندن<br>
+                  یک زندگی تازه رو شروع کنن
+                  مهم اینه که از اول پاییز بتونی
+                  از نو شروع کنی
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            اول بهار که همه بلندن
+            یک زندگی تازه رو شروع کنن
+            مهم اینه که از اول پاییز بتونی
+            از نو شروع کنی
+                "></i>
+    </div>
+    </div><hr>
+
+    <div class="text-mother  d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+              امروز که زنده‌ای؛ زندگی کن<br>
+              فردا خواهی مرد!
+              همان‌طور که یک ساعت پیش بایست مرده باشی<br>
+              وقتی که سراسر زندگی‌ات در برابر ابدیت لحظه‌ای بیش نیست؛چه جای آن است که خود را عذاب دهی؟<br>
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            امروز که زنده‌ای؛ زندگی کن
+            فردا خواهی مرد!
+            همان‌طور که یک ساعت پیش بایست مرده باشی
+            وقتی که سراسر زندگی‌ات در برابر ابدیت لحظه‌ای بیش نیست؛چه جای آن است که خود را عذاب دهی؟
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  
+                زندگی سخت نیست،تلخ نیست!<br>
+                همچون نت‌های موسیقی، بالا و پایین دارد.<br>
+                گاهی آرام و دل‌نواز و گاهی سخت و خشن<br>
+                ؛ گاهی شاد و رقص‌آور؛
+                 گاهی پر از غم! زندگی شیرینست؛ باید احساسش کرد.
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            زندگی سخت نیست،تلخ نیست!
+            همچون نت‌های موسیقی، بالا و پایین دارد.
+            گاهی آرام و دل‌نواز و گاهی سخت و خشن
+            ؛ گاهی شاد و رقص‌آور؛
+             گاهی پر از غم! زندگی شیرینست؛ باید احساسش کرد.
+                "></i>
+    </div>
+    </div><hr>
+
+    <div class="text-mother  d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+              و سپس به آن دخترى تبديل شدم كه<br>
+              از تنهايى لذت مى برد،<br>
+              زندگى كم حاشيه وخصوصى اى دارد،
+              با خودش و روز مرگی هایش سرگرم است<br>
+              باقاطعيت افرادی که باعث اذیت او میشوند را
+              از زندگي اش حذف می كند،<br>
+              وبرايش مهم نيست چه كسى از زندگى اش میرود.
+              هرگز اينقدر آرامش را احساس نكرده بودم...
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            و سپس به آن دخترى تبديل شدم كه
+            از تنهايى لذت مى برد،
+            زندگى كم حاشيه وخصوصى اى دارد،
+            با خودش و روز مرگی هایش سرگرم است
+            باقاطعيت افرادی که باعث اذیت او میشوند را
+            از زندگي اش حذف می كند،
+            وبرايش مهم نيست چه كسى از زندگى اش میرود.
+            هرگز اينقدر آرامش را احساس نكرده بودم...
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  
+                تو برای داشتن هیچکدوم از<br>
+                آرزوهات کم و کوچیک نیستی<br>
+                پس از ته دل بخواه و تلاش کن…♥️
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            تو برای داشتن هیچکدوم از
+            آرزوهات کم و کوچیک نیستی
+            پس از ته دل بخواه و تلاش کن…♥️
+                "></i>
+    </div>
+    </div><hr>
+
+    <div class="text-mother d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+              پرسیدم بهار چیست؟<br>
+              گفت : امیدواری دانه‌ای در دل خاک سرمازده،
+              شوق عشقی، در جان خسته‌ی آدمیزادی…
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            پرسیدم بهار چیست؟
+            گفت : امیدواری دانه‌ای در دل خاک سرمازده،
+            شوق عشقی، در جان خسته‌ی آدمیزادی…
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  
+                فقط برای یک روز<br>
+                عاشق همه چیز باش،
+                و ببین چه اتفاقی می‌افتد...
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            فقط برای یک روز
+            عاشق همه چیز باش،
+            و ببین چه اتفاقی می‌افتد...
+                "></i>
+    </div>
+    </div><hr>
+    
+    <div class="text-mother  d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+              ولی من‌ میگم<br>
+              اَبر های سیآه حتی اگر کنآر هم نرن
+              بآلاخره انقدر میبآرن تا سفید بشن.<br>
+              سفید میشن،
+              آسمونت آبی میشه دوبآره ☁️
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            ولی من‌ میگم
+            اَبر های سیآه حتی اگر کنآر هم نرن
+            بآلاخره انقدر میبآرن تا سفید بشن.
+            سفید میشن،
+            آسمونت آبی میشه دوبآره ☁️
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  
+                وقتی خونه نداری، فکر می کنی خونه دار بشی زندگیت شروع می شه،<br>
+                همه چیز ناگهان در خونه داشتن خلاصه می شه.<br>
+               وقتی مریضی، سلامتی می شه معنای زندگی، نقطه شروع.<br>
+               وقتی دلت خالیه، عاشق شدن.<br>
+               وقتی چاقی، لاغر شدن.
+               وقتی بی پولی، پولدار شدن.<br>
+               واقعیت اینه که اگه صبر کنی زندگی هرگز شروع نمی شه!🤍🌱
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            وقتی خونه نداری، فکر می کنی خونه دار بشی زندگیت شروع می شه،
+            همه چیز ناگهان در خونه داشتن خلاصه می شه.
+           وقتی مریضی، سلامتی می شه معنای زندگی، نقطه شروع.
+           وقتی دلت خالیه، عاشق شدن.
+           وقتی چاقی، لاغر شدن.
+           وقتی بی پولی، پولدار شدن.
+           واقعیت اینه که اگه صبر کنی زندگی هرگز شروع نمی شه!🤍🌱
+                "></i>
+    </div>
+    </div><hr>
+
+    <div class="text-mother  d-flex justify-content-around">
+      <div class="text-item">
+            <div>
+              <img src="imags/babon.jpg"  width="60px">
+            </div>
+            <span> 
+         
+              آره حق داری، شاید نشه! <br>
+              خیلی چیزا نمیشه. ولی این به این معنی نیست که تو نباید تلاش کنی<br>
+              . چون اگه بشه، کل دنیات می‌تونه از این رو به اون رو بشه.<br>
+              پس حتما باید بری دنبالش. خدا اونایی که رویاهاشونو دنبال میکنن رو دوست داره 💛☁️
+            </span>
+            <i class="fas fa-heart heart-btn" data-text="
+        
+            آره حق داری، شاید نشه! 
+            خیلی چیزا نمیشه. ولی این به این معنی نیست که تو نباید تلاش کنی
+            . چون اگه بشه، کل دنیات می‌تونه از این رو به اون رو بشه.
+            پس حتما باید بری دنبالش. خدا اونایی که رویاهاشونو دنبال میکنن رو دوست داره 💛
+          "></i>
+    </div>
+         
+    <div class="text-item  m-4">
+      <div>
+        <img src="imags/babon.jpg"  width="60px">
+      </div>
+              <span>  
+                من خودم را قوی میدانم <br>
+                گریه میکنم بیخوابی میکشم فریاد میزنم <br>
+                اما قوی ام چون بلدم از جایم بلند شوم 
+                و ادامه بدم بپذیرم
+                قوی بودن اینه
+              </span>
+            <i class="fas fa-heart heart-btn" data-text="
+            من خودم را قوی میدانم 
+            گریه میکنم بیخوابی میکشم فریاد میزنم 
+            اما قوی ام چون بلدم از جایم بلند شوم 
+            و ادامه بدم بپذیرم
+            قوی بودن اینه
+                "></i>
+    </div>
+    </div>
+
+    <footer class="foot  d-flex justify-content-around">
+      <h6 class="m-2">متن و جمله مورد علاقتان را برای ما بفرستید تا در سایت گذاشته شود♥️</h6>
+       <p> ایمیل: za.negahdari.96@gmail.com </p>
+       <p> ایدی تلگرام : zizi_24x</p>
+    </footer>
+<script src="file/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+          $(document).ready(function() {
+              // مقداردهی اولیه اگر وجود نداشت
+              if(localStorage.getItem('textFavorites') === null) {
+                  localStorage.setItem('textFavorites', JSON.stringify([]));
+              }
+              
+              // بارگذاری لیست مورد علاقه‌ها
+              let favorites = JSON.parse(localStorage.getItem('textFavorites'));
+              
+              // تنظیم وضعیت اولیه قلب‌ها
+              $('.heart-btn').each(function() {
+                  const text = $(this).data('text');
+                  if(favorites.includes(text)) {
+                      $(this).addClass('favorited');
+                  }
+              });
+              
+              // کلیک روی قلب
+              $('.heart-btn').click(function() {
+                  const text = $(this).data('text');
+                  let favorites = JSON.parse(localStorage.getItem('textFavorites'));
+                  
+                  if($(this).hasClass('favorited')) {
+                      // حذف از لیست
+                      favorites = favorites.filter(item => item !== text);
+                  } else {
+                      // اضافه به لیست
+                      if(!favorites.includes(text)) {
+                          favorites.push(text);
+                      }
+                  }
+                  
+                  // ذخیره در localStorage
+                  localStorage.setItem('textFavorites', JSON.stringify(favorites));
+                  
+                  // تغییر وضعیت قلب
+                  $(this).toggleClass('favorited');
+                  
+                  console.log('متن‌های ذخیره شده:', favorites);
+              });
+          });
+      </script>
+</body>
+</html>

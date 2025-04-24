@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="file/bootstrap.min.css.map">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>شعر های ناب واحساسی</title>
+    <style>
+       body{
+        margin: 0px;
+      }
+      .home-btn {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #4b9cf9;
+        border: none;
+        text-align: center;
+        font-size: 15px;
+        padding: 10px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        position: relative;
+        bottom: 80px;
+        text-decoration: none;
+}
+    .home-btn a {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+      text-decoration: none;
+      color: white;
+    }
+
+    .home-btn a:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    .home-btn:hover a {
+      padding-right: 25px;
+      
+    }
+    .home-btn:hover a:after {
+      opacity: 1;
+      right: 0;
+    }
+    .home-btn:hover{
+      background-color: yellow;
+      color: black;
+    } 
+      .carousel-inner{
+        position: relative;
+        bottom: 50px;
+      }
+      .titr1{
+        text-align: center;
+      }
+      .txt-nav{
+        position: relative;
+         bottom: 120px;
+      }
+      .offcanvas-body >a{
+        text-decoration: none;
+        color: black;
+      }
+      .offcanvas-body >a :hover{
+        color:  rgb(67, 185, 245);
+      }
+      .offcanvas-header{
+         background-color: rgb(255, 255, 3);
+      }
+      .logo{
+       direction: rtl;
+       position: relative;
+       bottom: 50px;
+       margin-right: 60px;
+      
+      }
+      .titlee{
+        text-align: center;
+        position: relative;
+        bottom: 60px;
+      }
+      .text-mother{
+        display: flex;
+        direction: rtl;
+      }
+       .text-item{
+        display: flex;
+        direction: rtl;
+       }
+       .text-item{
+        display: flex;
+        direction: rtl;
+       }
+       .heart-btn {
+            cursor: pointer;
+            color: #ccc;
+            font-size: 20px;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        .heart-btn.favorited {
+            color: #ff4757;
+        }
+        .heart-btn:hover {
+            transform: scale(1.1);
+        }
+        .favorites-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .foot{
+          direction: rtl;
+          border: 1px solid rgb(253, 253, 78);
+          background-color: rgb(253, 253, 78);
+        }
+
+       @media screen and (max-width: 500px) {
+       .text-mother{
+        flex-wrap: wrap;
+       }
+       .home-btn{
+        padding: 0px;
+        width: 150px;
+        position: relative;
+        bottom: 100px;
+       }
+       .foot{
+        flex-direction: column;
+       }
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm " style="background-color: rgb(253, 253, 78); height: 50px;">
+        <div class="container-fluid" style="direction: rtl;">
+                <h6>
+                    اینجا بابونه سرزمینی پر از جمله های دلنشین و خفن
+                </h6>
+        </div>
+  </nav>
+<header>
+    <div class="offcanvas offcanvas-end" id="demo">
+            <div class="offcanvas-header">
+                <h4 class="offcanvas-title">فهرست</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+            <a href="pag1.html"><p>
+             جمله های انگیزشی 
+            </p></a>
+
+            <a href="pag2.html"><p>
+              جمله های عاشقانه
+            </p></a>
+
+            <a href="pag3.html"><p>
+              عکس نوشته
+            </p></a>
+
+            <a href="pag4.html"><p>
+              توسعه فردی 
+            </p></a>
+
+            <a href="pag5.html"><p>
+               بیو فارسی و انگلیسی
+            </p></a>
+
+            <a href="pag6.html"><p>
+                شعر های ناب 
+               </p></a>
+
+            <a href="favorites.htm"><p>
+             مورد علاقه ها
+           </p></a>
+               
+        </div>
+    </div>
+    
+    <div class="container-fluid mt-3" style="direction: rtl;">
+            <button class="button"  type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"  data-bs-toggle="tooltip" title="Hooray!">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30" >
+                    <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"></path>
+                    </svg>
+            </button>
+    </div>
+    <div class="logo" >
+        <img src="imags/logo.png" width="150px">
+      </div>
+      <button class="home-btn">
+        <a  href="index.html">بازگشت به صفحه اول</a>
+     </button>
+</header>
+<div id="demoo" class="carousel slide" data-bs-ride="carousel">
+
+<!-- Indicators/dots -->
+<div class="carousel-indicators">
+    <button type="button" data-bs-target="#demoo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demoo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demoo" data-bs-slide-to="2"></button>
+</div>
+
+<!-- The slideshow/carousel -->
+<div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="imags/slid3.jpg"class="d-block" style="width:100%" height="500px">
+    </div>
+    <div class="carousel-item">
+          <img src="imags/slid4.jpg" alt="Chicago" class="d-block" style="width:100%" height="500px">
+    </div>
+    <div class="carousel-item">
+        <img src="imags/slid6.jpg" alt="New York" class="d-block" style="width:100%" height="500px">
+    </div>
+</div>
+
+<!-- Left and right controls/icons -->
+<button class="carousel-control-prev" type="button" data-bs-target="#demoo" data-bs-slide="prev">
+   <span class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#demoo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+</button>
+</div>
+  <div class="titr1">
+       <h3>---شعر های ناب و زیبا---</h3>
+  </div>
+    <div class="text-mother  justify-content-around">
+        <div class="text-item">
+              <div>
+                <img src="imags/babon.jpg"  width="60px">
+              </div>
+              <span> 
+                    میبرم نامت به شعرم با همه آرایه ها<br>
+                    نام تو اما ز هر آرایه ای زیبا تر است
+              </span>
+              <i class="fas fa-heart heart-btn" data-text="
+              میبرم نامت به شعرم با همه آرایه ها
+              نام تو اما ز هر آرایه ای زیبا تر است
+            "></i>
+      </div>    
+      <div class="text-item  m-4">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+            <span>  
+                رک بگویم از همه رنجیده ام<br>
+                از غریب آشنا ترسیده ام<br>
+                بیخیال سردی آغوش ها<br>
+                من به آغوش خودم چسبیده ام
+             </span>
+              <i class="fas fa-heart heart-btn" data-text="  
+              رک بگویم از همه رنجیده ام
+              از غریب آشنا ترسیده ام
+              بیخیال سردی آغوش ها
+              من به آغوش خودم چسبیده ام
+                  "></i>
+      </div>
+      </div><hr>
+      <div class="text-mother  justify-content-around">
+        <div class="text-item">
+              <div>
+                <img src="imags/babon.jpg"  width="60px">
+              </div>
+              <span> 
+                  کاش آن کس که به تو حق قضاوت میداد<br>
+                  به من سوخته دل فرصت صحبت میداد
+              </span>
+              <i class="fas fa-heart heart-btn" data-text="
+              کاش آن کس که به تو حق قضاوت میداد
+              به من سوخته دل فرصت صحبت میداد
+            "></i>
+      </div>    
+      <div class="text-item  m-4">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+            <span>  
+                 بین  مردم مثل من پیدا نخواهد شد نگرد<br>
+                 یک ندارد جز خودش 
+                 مضرب نمیفهمی چرا ؟
+             </span>
+              <i class="fas fa-heart heart-btn" data-text="  
+              بین  مردم مثل من پیدا نخواهد شد نگرد
+              یک ندارد جز خودش 
+              مضرب نمیفهمی چرا ؟
+                  "></i>
+      </div>
+      </div><hr>
+      <div class="text-mother  justify-content-around">
+        <div class="text-item">
+              <div>
+                <img src="imags/babon.jpg"  width="60px">
+              </div>
+              <span> 
+                  گاهی دلم میگیرد از احوالپرسی ها<br>
+                  خوبم خداروشکر گفتن های اجباری
+              </span>
+              <i class="fas fa-heart heart-btn" data-text="
+              گاهی دلم میگیرد از احوالپرسی ها
+              خوبم خداروشکر گفتن های اجباری
+            "></i>
+      </div>    
+      <div class="text-item  m-4">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+            <span>  
+               دیشب به خواب دیدم و
+               گفتم خوش آدمیزادی<br>
+               ای خوش ترین خوش آماده
+               بار دیگر بیا
+             </span>
+              <i class="fas fa-heart heart-btn" data-text="  
+              دیشب به خواب دیدم و
+              گفتم خوش آدمیزادی
+              ای خوش ترین خوش آماده
+              بار دیگر بیا
+                  "></i>
+      </div>
+      </div><hr>
+
+      <div class="text-mother  justify-content-around">
+        <div class="text-item">
+              <div>
+                <img src="imags/babon.jpg"  width="60px">
+              </div>
+              <span> 
+            دردل با کسی نمیگویم  به غیر از یار خویش<br>
+            کشته را بنگر شکایت پیش قاتل می برد
+              </span>
+              <i class="fas fa-heart heart-btn" data-text="
+              دردل با کسی نمیگویم  به غیر از یار خویش
+              کشته را بنگر شکایت پیش قاتل می برد
+            "></i>
+      </div>    
+      <div class="text-item  m-4">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+            <span>  
+          خوردیم زخم ها که نه خون آمد نه آه <br>
+          این چه نیش بود که تا استخوان برفت
+             </span>
+              <i class="fas fa-heart heart-btn" data-text="  
+              خوردیم زخم ها که نه خون آمد نه آه 
+              این چه نیش بود که تا استخوان برفت
+                  "></i>
+      </div>
+      </div><hr>
+      <div class="text-mother  justify-content-around">
+        <div class="text-item">
+              <div>
+                <img src="imags/babon.jpg"  width="60px">
+              </div>
+              <span> 
+            همه شب با دل دیوانه خود در حرفم<br>
+            چه کنم جز خودم نامه بری نیست مرا
+              </span>
+              <i class="fas fa-heart heart-btn" data-text="
+              همه شب با دل دیوانه خود در حرفم
+              چه کنم جز خودم نامه بری نیست مرا
+            "></i>
+      </div>    
+      <div class="text-item  m-4">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+            <span>  
+            من آموزگارم که سوال از عشق می پرسیدم <br>
+            ولیکن خود نمی دانم جواب امتحانم را
+             </span>
+              <i class="fas fa-heart heart-btn" data-text="  
+              من آموزگارم که سوال از عشق می پرسیدم 
+            ولیکن خود نمی دانم جواب امتحانم را
+                  "></i>
+      </div>
+      </div><hr>
+      <div class="text-mother  justify-content-around">
+        <div class="text-item">
+              <div>
+                <img src="imags/babon.jpg"  width="60px">
+              </div>
+              <span> 
+               تورا با غیر میبینم صدایم در نمی آید <br>
+               دلم میسوزد و کاری ز دستم برنمی آید
+              </span>
+              <i class="fas fa-heart heart-btn" data-text="
+              تورا با غیر میبینم صدایم در نمی آید 
+              دلم میسوزد و کاری ز دستم برنمی آید
+            "></i>
+      </div>    
+      <div class="text-item  m-4">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+            <span>  
+             این جهان پر از صدای حرکت <br>
+             پاهای مردانی است که 
+             همچنان که تورا می بوسند <br>
+             در ذهن خود طناب دار تورا میبافند
+             </span>
+              <i class="fas fa-heart heart-btn" data-text="  
+              این جهان پر از صدای حرکت 
+              پاهای مردانی است که 
+              همچنان که تورا می بوسند 
+              در ذهن خود طناب دار تورا میبافند
+                  "></i>
+      </div>
+      </div><hr>
+      <div class="text-mother  justify-content-around">
+        <div class="text-item">
+              <div>
+                <img src="imags/babon.jpg"  width="60px">
+              </div>
+              <span> 
+               خون می چکد از دیده در این کنج صبوری <br>
+               این صبر که من میکنم افشردن جان است
+              </span>
+              <i class="fas fa-heart heart-btn" data-text="
+              خون می چکد از دیده در این کنج صبوری 
+              این صبر که من میکنم افشردن جان است
+            "></i>
+      </div>    
+      <div class="text-item  m-4">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+            <span>  
+              شده آیا که غمی ریشه به جانت بزند <br>
+              عاشقش باشی و او دم از خیانت بزند 
+             </span>
+              <i class="fas fa-heart heart-btn" data-text="  
+              شده آیا که غمی ریشه به جانت بزند 
+              عاشقش باشی و او دم از خیانت بزند 
+                  "></i>
+      </div>
+      </div><hr>
+      <div class="text-mother  justify-content-around">
+        <div class="text-item">
+              <div>
+                <img src="imags/babon.jpg"  width="60px">
+              </div>
+              <span> 
+                هرچه  دادم به او حلالش باد <br>
+                غیر از آن دل که مفت بخشیدم
+              </span>
+              <i class="fas fa-heart heart-btn" data-text="
+              هرچه  دادم به او حلالش باد 
+              غیر از آن دل که مفت بخشیدم
+            "></i>
+      </div>    
+      <div class="text-item  m-4">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+            <span>  
+                غزل هایی که بر رویت اثر گفتی ندارد را <br>
+                برای ماه میخواندم نظر میکرد پایین را
+             </span>
+              <i class="fas fa-heart heart-btn" data-text="  
+              غزل هایی که بر رویت اثر گفتی ندارد را 
+              برای ماه میخواندم نظر میکرد پایین را
+                  "></i>
+      </div>
+      </div><hr>
+      <div class="text-mother  justify-content-around">
+        <div class="text-item">
+              <div>
+                <img src="imags/babon.jpg"  width="60px">
+              </div>
+              <span> 
+                 رفیق<br>
+                 بعد هرس شاخه خشک شد نه درخت <br>
+                 به آن کس که رفت بگو من ضرر نخواهم کرد
+              </span>
+              <i class="fas fa-heart heart-btn" data-text="
+              رفیق
+              بعد هرس شاخه خشک شد نه درخت 
+              به آن کس که رفت بگو من ضرر نخواهم کرد
+            "></i>
+      </div>    
+      <div class="text-item  m-4">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+            <span>  
+            در اندرون من خسته دل ندانم کیست<br>
+            که من خوشم و او  در غوغاست
+             </span>
+              <i class="fas fa-heart heart-btn" data-text="  
+              در اندرون من خسته دل ندانم کیست
+              که من خوشم و او  در غوغاست
+                  "></i>
+      </div>
+      </div><hr>
+      <div class="text-mother  justify-content-around">
+        <div class="text-item">
+              <div>
+                <img src="imags/babon.jpg"  width="60px">
+              </div>
+              <span> 
+                تو مرا یاد کنی یا نکنی <br>
+                باورت گر بشود یا نشود  <br>
+                حرفی نیست  اما نفسم میگیرد <br>
+                در هوایی که نفس های تو نیست
+              </span>
+              <i class="fas fa-heart heart-btn" data-text="
+              تو مرا یاد کنی یا نکنی 
+              باورت گر بشود یا نشود  
+              حرفی نیست  اما نفسم میگیرد 
+              در هوایی که نفس های تو نیست
+            "></i>
+      </div>    
+      <div class="text-item  m-4">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+            <span>  
+               امان از دل میگوید بزن بر طبل رسوایی <br>
+               ولی دیوانگی های مرا گردن نمیگیرد
+             </span>
+              <i class="fas fa-heart heart-btn" data-text="  
+              امان از دل میگوید بزن بر طبل رسوایی 
+              ولی دیوانگی های مرا گردن نمیگیرد
+                  "></i>
+      </div>
+      </div><hr>
+      <div class="text-mother  justify-content-around">
+        <div class="text-item">
+              <div>
+                <img src="imags/babon.jpg"  width="60px">
+              </div>
+              <span> 
+                گفتی که پس از سیاه رنگی نبود<br>
+                پس موی سیاه من چرا گشت سفید
+              </span>
+              <i class="fas fa-heart heart-btn" data-text="
+              گفتی که پس از سیاه رنگی نبود
+              پس موی سیاه من چرا گشت سفید
+            "></i>
+      </div>    
+      <div class="text-item  m-4">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+            <span>  
+              چه کسی می داند؛<br>
+              که تو در پیله تنهایی خود تنهایی
+              چه کسی می داند؛<br>
+              که تو در حسرت یک روزنه در فردایی
+              پیله ات را بگشا!<br>
+              تو به اندازه پروانه شدن زیبایی
+             </span>
+              <i class="fas fa-heart heart-btn" data-text="  
+              چه کسی می داند؛
+              که تو در پیله تنهایی خود تنهایی
+              چه کسی می داند؛
+              که تو در حسرت یک روزنه در فردایی
+              پیله ات را بگشا!
+              تو به اندازه پروانه شدن زیبایی
+                  "></i>
+      </div>
+      </div><hr>
+      <div class="text-mother  justify-content-around">
+        <div class="text-item">
+              <div>
+                <img src="imags/babon.jpg"  width="60px">
+              </div>
+              <span> 
+                جز توکل بر خدا سرمایه ای در کار نیست<br>
+                هر که را باشد توکل کار او دشوار نیست
+              </span>
+              <i class="fas fa-heart heart-btn" data-text="
+              جز توکل بر خدا سرمایه ای در کار نیست
+              هر که را باشد توکل کار او دشوار نیست
+            "></i>
+      </div>    
+      <div class="text-item  m-4">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+            <span>  
+              زندگی آب روانی است، روان می گذرد<br>
+              هر چه تقدیر من و توست، همان می گذرد
+             </span>
+              <i class="fas fa-heart heart-btn" data-text="  
+              زندگی آب روانی است، روان می گذرد
+              هر چه تقدیر من و توست، همان می گذرد
+                  "></i>
+      </div>
+      </div><hr>
+      <div class="text-mother  justify-content-around">
+        <div class="text-item">
+              <div>
+                <img src="imags/babon.jpg"  width="60px">
+              </div>
+              <span> 
+                پیر آن نیست که بر سر بزند موی سفید،<br>
+                هر جَوانی که دلش شوق ندارَد پیراست
+              </span>
+              <i class="fas fa-heart heart-btn" data-text="
+              پیر آن نیست که بر سر بزند موی سفید،
+              هر جَوانی که دلش شوق ندارَد پیراست
+            "></i>
+      </div>    
+      <div class="text-item  m-4">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+            <span>  
+              زمانه دوخت لبم را به ریسمان سکوت<br>
+              که عهد، عهد غم است و زمان، زمان سکوت
+             </span>
+              <i class="fas fa-heart heart-btn" data-text="  
+              زمانه دوخت لبم را به ریسمان سکوت
+              که عهد، عهد غم است و زمان، زمان سکوت
+                  "></i>
+      </div>
+      </div><hr>
+      <div class="text-mother  justify-content-around">
+        <div class="text-item">
+              <div>
+                <img src="imags/babon.jpg"  width="60px">
+              </div>
+              <span> 
+                حال شب های مرا همچو منی داند و بس!<br>
+                تو چه دانی که شب سوختگان چون گذرد.
+              </span>
+              <i class="fas fa-heart heart-btn" data-text="
+              حال شب های مرا همچو منی داند و بس!
+              تو چه دانی که شب سوختگان چون گذرد.
+            "></i>
+      </div>    
+      <div class="text-item  m-4">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+            <span>  
+              چیزی از ناچیز را عمر و زمان کردند نام<br>
+              زندگی چیزی‌ ز ناچیز است‌ و آن‌ هم‌ هیچ نیست
+             </span>
+              <i class="fas fa-heart heart-btn" data-text="  
+              چیزی از ناچیز را عمر و زمان کردند نام
+              زندگی چیزی‌ ز ناچیز است‌ و آن‌ هم‌ هیچ نیست
+                  "></i>
+      </div>
+      </div><hr>
+      <div class="text-mother  justify-content-around">
+        <div class="text-item">
+              <div>
+                <img src="imags/babon.jpg"  width="60px">
+              </div>
+              <span> 
+                هزار بار پیاده طواف کعبه کنی<br>
+                قبول حق نشود گر دلی بیازاری
+              </span>
+              <i class="fas fa-heart heart-btn" data-text="
+              هزار بار پیاده طواف کعبه کنی
+              قبول حق نشود گر دلی بیازاری
+            "></i>
+      </div>    
+      <div class="text-item  m-4">
+        <div>
+          <img src="imags/babon.jpg"  width="60px">
+        </div>
+            <span>  
+              دردم از یار است و درمان نیز هم<br>
+              دل فدای او شد و جان نیز هم
+             </span>
+              <i class="fas fa-heart heart-btn" data-text="  
+              دردم از یار است و درمان نیز هم
+              دل فدای او شد و جان نیز هم
+                  "></i>
+      </div>
+      </div>
+      <footer class="foot  d-flex justify-content-around">
+          <h6 class="m-2">متن و جمله مورد علاقتان را برای ما بفرستید تا در سایت گذاشته شود♥️</h6>
+          <p> ایمیل: za.negahdari.96@gmail.com </p>
+          <p> ایدی تلگرام : zizi_24x</p>
+      </footer>
+
+
+    <script src="file/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // مقداردهی اولیه اگر وجود نداشت
+            if(localStorage.getItem('textFavorites') === null) {
+                localStorage.setItem('textFavorites', JSON.stringify([]));
+            }
+            
+            // بارگذاری لیست مورد علاقه‌ها
+            let favorites = JSON.parse(localStorage.getItem('textFavorites'));
+            
+            // تنظیم وضعیت اولیه قلب‌ها
+            $('.heart-btn').each(function() {
+                const text = $(this).data('text');
+                if(favorites.includes(text)) {
+                    $(this).addClass('favorited');
+                }
+            });
+            
+            // کلیک روی قلب
+            $('.heart-btn').click(function() {
+                const text = $(this).data('text');
+                let favorites = JSON.parse(localStorage.getItem('textFavorites'));
+                
+                if($(this).hasClass('favorited')) {
+                    // حذف از لیست
+                    favorites = favorites.filter(item => item !== text);
+                } else {
+                    // اضافه به لیست
+                    if(!favorites.includes(text)) {
+                        favorites.push(text);
+                    }
+                }
+                
+                // ذخیره در localStorage
+                localStorage.setItem('textFavorites', JSON.stringify(favorites));
+                
+                // تغییر وضعیت قلب
+                $(this).toggleClass('favorited');
+                
+                console.log('متن‌های ذخیره شده:', favorites);
+            });
+        });
+        
+        
+    </script>
+</body>
+</html>
